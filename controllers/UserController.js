@@ -13,8 +13,11 @@ module.exports = {
         password
       });
 
+      delete user.password;
+
       req.session.save(() => {
         req.session.isAuthenticated = true;
+        req.session.currentUser = user;
         res.status(200).json(user);
       });
     } catch (err) {
@@ -26,7 +29,10 @@ module.exports = {
   login: async (req, res) => {
     const { body: { email, password } } = req;
     try {
-      const user = await User.findOne({ where: { email } });
+      const user = await User.findOne({
+        where: { email },
+        attributes: { exclude: ['createdAt, updatedAt'] },
+      });
 
       if (!user) {
         res.status(400).json({ message: 'Incorrect email or password. Please try again!' });
@@ -41,8 +47,12 @@ module.exports = {
           .json({ message: 'Incorrect email or password. Please try again!' });
         return;
       }
+
+      delete user.password;
+
       req.session.save(() => {
         req.session.isAuthenticated = true;
+        req.session.currentUser = user;
         res.status(200).json({ user, message: 'You are now logged in!' });
       });
     } catch (err) {
