@@ -1,5 +1,7 @@
-const { DashboardController } = require('../controllers');
+const router = require('express').Router();
 
-module.exports = app => {
-  app.get('/', DashboardController.getDashboard);
-}
+const pageRoutes = require('./pages');
+
+router.use('/', pageRoutes);
+
+module.exports = router;
