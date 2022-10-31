@@ -1,6 +1,11 @@
 const router = require('express').Router();
-const { DashboardController } = require('../../controllers');
+const { PageController } = require('../../controllers');
 
-router.get('/', DashboardController.getDashboard);
+// Static pages
+router.get('/register', (req, res) => res.render('register'));
+router.get('/login', (req, res) => res.render('login'));
+
+// Pages with data
+router.get('/', PageController.getDashboard);
 
 module.exports = router;

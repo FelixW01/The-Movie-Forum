@@ -1,5 +1,7 @@
-const DashboardController = require('./DashboardController');
+const PageController = require('./PageController');
+const UserController = require('./UserController');
 
 module.exports = {
-  DashboardController
+  PageController,
+  UserController,
 }
