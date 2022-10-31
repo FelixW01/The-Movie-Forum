@@ -13,8 +13,10 @@ module.exports = {
         password
       });
 
-      res.status(200).json(user);
-
+      req.session.save(() => {
+        req.session.isAuthenticated = true;
+        res.status(200).json(user);
+      });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -39,12 +41,23 @@ module.exports = {
           .json({ message: 'Incorrect email or password. Please try again!' });
         return;
       }
-
-      res.status(200).json({ user, message: 'You are now logged in!' });
-
+      req.session.save(() => {
+        req.session.isAuthenticated = true;
+        res.status(200).json({ user, message: 'You are now logged in!' });
+      });
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
   },
+
+  logout: (req, res) => {
+    if (req.session.isAuthenticated) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  }
 }
