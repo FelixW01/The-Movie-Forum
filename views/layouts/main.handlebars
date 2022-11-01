@@ -15,12 +15,14 @@
     integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
     crossorigin="anonymous"></script>
   <link href="css/style.css" rel="stylesheet">
+  <script src="/js/script.js" async></script>
 </head>
 
 <body>
   {{#if isAuthenticated}}
   {{> navbar}}
   {{/if}}
+  {{> toast}}
   {{{ body }}}
   {{#if isAuthenticated}}
   <script src="/js/logout.js"></script>

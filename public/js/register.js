@@ -16,7 +16,8 @@ const registrationHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert('Failed to register.');
+      const { message } = await response.json();
+      showToast({ message });
     }
   }
 };

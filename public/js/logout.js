@@ -7,7 +7,8 @@ const logout = async () => {
   if (response.ok) {
     document.location.replace('/login');
   } else {
-    alert('Failed to log out.');
+    const { message } = await response.json();
+    showToast({ message });
   }
 };
 
