@@ -8,7 +8,7 @@ const logout = async () => {
     document.location.replace('/login');
   } else {
     const { message } = await response.json();
-    showToast({ message });
+    showAlert({ message, type: 'danger' });
   }
 };
 

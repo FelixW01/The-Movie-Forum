@@ -14,7 +14,7 @@ const loginFormHandler = async (event) => {
       document.location.replace('/');
     } else {
       const { message } = await response.json();
-      showToast({ message });
+      showAlert({ target: 'login-alert', message, type: 'danger' });
     }
   }
 };

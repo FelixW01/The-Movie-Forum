@@ -17,7 +17,7 @@ const registrationHandler = async (event) => {
       document.location.replace('/');
     } else {
       const { message } = await response.json();
-      showToast({ message });
+      showAlert({ target: 'registration-alert', message, type: 'danger' });
     }
   }
 };
