@@ -19,10 +19,7 @@
 </head>
 
 <body>
-  {{#if isAuthenticated}}
-  {{> navbar}}
-  {{/if}}
-
+  {{> navbar isAuthenticated=this.isAuthenticated }}
   {{> toast}}
   {{{ body }}}
   {{#if isAuthenticated}}

@@ -14,7 +14,7 @@ const registrationHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/dashboard');
     } else {
       const { message } = await response.json();
       showAlert({ target: 'registration-alert', message, type: 'danger' });
