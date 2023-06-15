@@ -8,6 +8,7 @@ const logout = async () => {
     document.location.replace('/');
   } else {
     const { message } = await response.json();
+    // eslint-disable-next-line no-undef
     showAlert({ message, type: 'danger' });
   }
 };

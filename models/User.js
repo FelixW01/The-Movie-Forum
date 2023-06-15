@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../db/config');
@@ -18,27 +19,27 @@ User.init(
     },
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true
-      }
+        isEmail: true,
+      },
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [7]
-      }
-    }
+        len: [7],
+      },
+    },
   },
   {
     hooks: {
@@ -48,13 +49,16 @@ User.init(
       },
 
       async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
         return updatedUserData;
-      }
+      },
     },
     sequelize,
     underscored: true,
-    modelName: 'User'
+    modelName: 'User',
   }
 );
 

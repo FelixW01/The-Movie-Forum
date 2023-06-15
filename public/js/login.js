@@ -1,4 +1,4 @@
-const loginFormHandler = async (event) => {
+const loginFormHandler = async event => {
   event.preventDefault();
   const email = document.querySelector('#email').value.trim();
   const password = document.querySelector('#password').value.trim();
@@ -14,6 +14,7 @@ const loginFormHandler = async (event) => {
       document.location.replace('/dashboard');
     } else {
       const { message } = await response.json();
+      // eslint-disable-next-line no-undef
       showAlert({ target: 'login-alert', message, type: 'danger' });
     }
   }

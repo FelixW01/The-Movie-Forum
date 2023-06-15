@@ -1,4 +1,4 @@
-const registrationHandler = async (event) => {
+const registrationHandler = async event => {
   event.preventDefault();
 
   const firstName = document.querySelector('#firstName').value.trim();
@@ -9,7 +9,12 @@ const registrationHandler = async (event) => {
   if (email && password) {
     const response = await fetch('/api/register', {
       method: 'POST',
-      body: JSON.stringify({ firstName, lastName, email, password }),
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password,
+      }),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -17,7 +22,12 @@ const registrationHandler = async (event) => {
       document.location.replace('/dashboard');
     } else {
       const { message } = await response.json();
-      showAlert({ target: 'registration-alert', message, type: 'danger' });
+      // eslint-disable-next-line no-undef
+      showAlert({
+        target: 'registration-alert',
+        message,
+        type: 'danger',
+      });
     }
   }
 };
