@@ -1,10 +1,17 @@
-const { User } = require('../models');
+const {
+  User
+} = require('../models');
 
 // CREATE new user
 module.exports = {
   register: async (req, res) => {
     const {
-      body: { firstName, lastName, email, password },
+      body: {
+        firstName,
+        lastName,
+        email,
+        password
+      },
     } = req;
     try {
       const user = await User.create({
@@ -29,12 +36,19 @@ module.exports = {
 
   login: async (req, res) => {
     const {
-      body: { email, password },
+      body: {
+        email,
+        password
+      },
     } = req;
     try {
       const user = await User.findOne({
-        where: { email },
-        attributes: { exclude: ['createdAt, updatedAt'] },
+        where: {
+          email
+        },
+        attributes: {
+          exclude: ['createdAt, updatedAt']
+        },
       });
 
       if (!user) {
