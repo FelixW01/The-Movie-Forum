@@ -16,10 +16,10 @@ Post.init(
             allowNull: false
         },
         user: {
-            type: DataTypes.STRING,
+            type: DataTypes.UUID,
             allowNull: false,
             references: {
-              model: 'user',
+              model: 'users',
               key: 'id',
             },
           },
@@ -38,7 +38,7 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
             references: {
-              model: 'movie',
+              model: 'movies',
               key: 'id',
             },
           },
