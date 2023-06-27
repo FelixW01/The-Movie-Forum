@@ -17,10 +17,14 @@ Post.init(
         },
         user: {
             type: DataTypes.STRING,
-            allowNull: false
-        },
+            allowNull: false,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
+          },
         description: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         content: {
@@ -29,7 +33,15 @@ Post.init(
         },
         img: {
             type: DataTypes.BLOB
-        }
+        },
+        movie: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            references: {
+              model: 'movie',
+              key: 'id',
+            },
+          },
     },
     {
         sequelize,
