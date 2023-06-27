@@ -12,10 +12,10 @@ Comment.init(
             primaryKey: true,
           },
           user: {
-            type: DataTypes.STRING,
+            type: DataTypes.UUID,
             allowNull: false,
             references: {
-              model: 'user',
+              model: 'users',
               key: 'id',
             },
           },
@@ -24,10 +24,10 @@ Comment.init(
             allowNull: false
         },
         parent_post: {
-            type: DataTypes.STRING,
+            type: DataTypes.UUID,
             allowNull: false,
             references: {
-              model: 'post',
+              model: 'posts',
               key: 'id',
             },
           },
