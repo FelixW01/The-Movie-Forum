@@ -22,5 +22,3 @@ VALUES (001, "Elemental", "funrunner79", "Too Funny", "My child loved this film"
        (003, "The Little Mermaid", "littleMermaidBinaryData"),
        (004, "The Flash", "alphazeta", "I'm a fan again", "This is the best movies ever", "theFlashMoviePoster");
 
-
-    
