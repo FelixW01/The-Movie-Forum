@@ -1,9 +1,9 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../db/config');
 
-class Post extends Model {}
+class Comment extends Model {}
 
-Post.init(
+Comment.init(
     {
         id: {
             type: DataTypes.UUID,
@@ -11,32 +11,25 @@ Post.init(
             allowNull: false,
             primaryKey: true,
           },
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         user: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        description: {
-            type: Datatypes.STRING,
-            allowNull: false,
         },
         content: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        img: {
-            type: DataTypes.BLOB
+        parentPost: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
         sequelize,
         timestamps: false,
         underscored: true,
-        modelName: 'post'
+        modelName: 'comment'    
     }
 );
 
-module.exports = Post;
+module.exports = Comment;
