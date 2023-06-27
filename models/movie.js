@@ -3,7 +3,7 @@ const sequelize = require('../db/config');
 
 class Movie extends Model {}
 
-Comment.init(
+Movie.init(
     {
         id: {
             type: DataTypes.STRING,
