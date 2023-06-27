@@ -11,18 +11,26 @@ Comment.init(
             allowNull: false,
             primaryKey: true,
           },
-        user: {
+          user: {
             type: DataTypes.STRING,
-            allowNull: false
-        },
+            allowNull: false,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
+          },
         content: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        parentPost: {
+        parent_post: {
             type: DataTypes.STRING,
-            allowNull: false
-        }
+            allowNull: false,
+            references: {
+              model: 'post',
+              key: 'id',
+            },
+          },
     },
     {
         sequelize,
