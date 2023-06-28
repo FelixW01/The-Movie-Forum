@@ -46,7 +46,7 @@ Comment.belongsToMany(User, {
 })
 
 module.exports = {
-  User, 
+  User,
   Post,
   Comment,
   Movie
