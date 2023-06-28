@@ -21,23 +21,23 @@ const imageBuffer4 = fs.readFileSync(
 const theFlashMoviePosterBiDa = imageBuffer4.toString('base64');
 
 const forumSeedData = `
-INSERT INTO User (id, first_name, last_name, email, password)
-VALUES (000, "Regina", "Smith", "rsmith@gmail.com", "12345678"),
-       (001, "Jon", "Jones", "jjones@gmail.com", "12345678"),
-       (002, "Jessica", "Alcorn", "jalcon33@gmail.com", "12345678"),
-       (003, "Randy", "Ward", "rward@gmail.com", "12345678");
+INSERT INTO User (id, username, email, password)
+VALUES (1, "alphazeta", "rsmith@gmail.com", "12345678"),
+       (2, "funrunner79", "jjones@gmail.com", "12345678"),
+       (3, "askmenot31", "jalcon33@gmail.com", "12345678"),
+       (4, "almostwinning24", "rward@gmail.com", "12345678");
 
 INSERT INTO Movie (id, title, poster)
-VALUES (001, "Elemental", "${elementalBiDa}"),
-       (002, "No Hard Feelings", "${noHardFeelingsBiDa}"),
-       (003, "The Little Mermain", "${littleMermaidBiDa}"),
-       (004, "The Flash", "${theFlashMoviePosterBiDa}");
+VALUES (1, "Elemental", "${elementalBiDa}"),
+       (2, "No Hard Feelings", "${noHardFeelingsBiDa}"),
+       (3, "The Little Mermain", "${littleMermaidBiDa}"),
+       (4, "The Flash", "${theFlashMoviePosterBiDa}");
 
-INSERT INTO Comment (id, username, content, parent_post)
-VALUES (000, "alphazeta", "The Flash", "This is the best movies ever"),
-       (001, "funrunner79", "Elemental", "My child loved this film"),
-       (002, "askmenot31", "No Hard Feelings", "I tried to laugh... I tried."),
-       (003, "almostwinning24", "The Little Mermaid", "My daughter enjoyed it, so I did too!");
+INSERT INTO Comment (id, username, content)
+VALUES (1, "alphazeta", "The Flash", "This is the best movies ever"),
+       (2, "funrunner79", "Elemental", "My child loved this film"),
+       (3, "askmenot31", "No Hard Feelings", "I tried to laugh... I tried."),
+       (4, "almostwinning24", "The Little Mermaid", "My daughter enjoyed it, so I did too!");
 
 INSERT INTO Post (id, title, username, description, content, img)
 VALUES (001, "Elemental", "funrunner79", "Too Funny", "My child loved this film", "${elementalBiDa}"),
@@ -57,29 +57,25 @@ const generateSeed = async function () {
     await User.bulkCreate([
       {
         id: 0,
-        first_name: 'Regina',
-        last_name: 'Smith',
+        username: 'alphazeta',
         email: 'rsmith@gmail.com',
         password: '12345678',
       },
       {
         id: 1,
-        first_name: 'Jon',
-        last_name: 'Jones',
+        username: 'funrunner79',
         email: 'jjones@gmail.com',
         password: '12345678',
       },
       {
         id: 2,
-        first_name: 'Jessica',
-        last_name: 'Alcorn',
+        username: 'askmenot31',
         email: 'jalcon33@gmail.com',
         password: '12345678',
       },
       {
         id: 3,
-        first_name: 'Randy',
-        last_name: 'Ward',
+        username: 'almostwinning24',
         email: 'rward@gmail.com',
         password: '12345678',
       },
@@ -96,28 +92,24 @@ const generateSeed = async function () {
     // Insert comments
     await Comment.bulkCreate([
       {
-        id: 0,
-        username: 'alphazeta',
-        content: 'The Flash',
-        parent_post: 'This is the best movie ever',
-      },
-      {
         id: 1,
-        username: 'funrunner79',
-        content: 'Elemental',
-        parent_post: 'My child loved this film',
+        username: 'alphazeta',
+        content: 'This is the best movie ever',
       },
       {
         id: 2,
-        username: 'askmenot31',
-        content: 'No Hard Feelings',
-        parent_post: 'I tried to laugh... I tried.',
+        username: 'funrunner79',
+        content: 'My child loved this film',
       },
       {
         id: 3,
+        username: 'askmenot31',
+        content: 'I tried to laugh... I tried.',
+      },
+      {
+        id: 4,
         username: 'almostwinning24',
-        content: 'The Little Mermaid',
-        parent_post: 'My daughter enjoyed it, so I did too!',
+        content: 'My daughter enjoyed it, so I did too!',
       },
     ]);
 
