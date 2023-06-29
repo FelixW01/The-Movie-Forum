@@ -6,6 +6,6 @@ const forumRoutes = require('./forum');
 
 router.use('/', pageRoutes);
 router.use('/api', apiRoutes);
-router.use('/movies', forumRoutes);
+router.use('/movie', forumRoutes);
 
 module.exports = router;

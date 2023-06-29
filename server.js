@@ -28,14 +28,18 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+  extended: false
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
 const force = process.env.FORCE_SYNC === 'true';
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({
+  force
+}).then(() => {
   app.listen(PORT, () => {
     console.info(`Server listening on port ${PORT}`);
   });
