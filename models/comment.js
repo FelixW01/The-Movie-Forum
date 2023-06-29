@@ -13,6 +13,17 @@ Comment.init({
     primaryKey: true,
     autoIncrement: true
   },
+  content: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  parentPost: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'posts',
+      key: 'id',
+    },
+  },
   userId: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -21,21 +32,9 @@ Comment.init({
       key: 'id',
     },
   },
-  content: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  parentPost: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: 'posts',
-      key: 'id',
-    },
-  },
 }, {
   sequelize,
-  timestamps: false,
+  timestamps: true,
   underscored: true,
   modelName: 'comment'
 });

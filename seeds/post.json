@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Elemental",
+    "description": "Too Funny",
+    "content": "My child loved this film",
+    "img": "https://image.tmdb.org/t/p/original//8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 1,
+    "userId": 2
+  },
+  {
+    "id": 2,
+    "title": "No Hard Feelings",
+    "description": "Not Really",
+    "content": "I tried to laugh... I tried.",
+    "img": "https://image.tmdb.org/t/p/original//8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 2,
+    "userId": 3
+  },
+  {
+    "id": 3,
+    "title": "The Little Mermaid",
+    "description": "Happy Child",
+    "content": "My daughter enjoyed it, so I did too!",
+    "img": "https://image.tmdb.org/t/p/original//8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 3,
+    "userId": 4
+  },
+  {
+    "id": 4,
+    "title": "The Flash",
+    "description": "I'm a fan again",
+    "content": "This is the best movies ever",
+    "img": "https://image.tmdb.org/t/p/original//8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 4,
+    "userId": 1
+  }
+]

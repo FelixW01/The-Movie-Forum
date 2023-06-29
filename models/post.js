@@ -17,14 +17,6 @@ Post.init({
     type: DataTypes.STRING,
     allowNull: false
   },
-  userId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: 'users',
-      key: 'id',
-    },
-  },
   description: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -44,9 +36,17 @@ Post.init({
       key: 'id',
     },
   },
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'users',
+      key: 'id',
+    },
+  },
 }, {
   sequelize,
-  timestamps: false,
+  timestamps: true,
   underscored: true,
   modelName: 'post'
 });

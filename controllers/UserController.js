@@ -7,16 +7,14 @@ module.exports = {
   register: async (req, res) => {
     const {
       body: {
-        firstName,
-        lastName,
+        username,
         email,
         password
       },
     } = req;
     try {
       const user = await User.create({
-        firstName,
-        lastName,
+        username,
         email,
         password,
       });
@@ -24,7 +22,7 @@ module.exports = {
       delete user.password;
 
       req.session.save(() => {
-        req.session.isAuthenticated = true;
+        req.session.loggedIn = true;
         req.session.currentUser = user;
         res.status(200).json(user);
       });
@@ -70,7 +68,7 @@ module.exports = {
       delete user.password;
 
       req.session.save(() => {
-        req.session.isAuthenticated = true;
+        req.session.loggedIn = true;
         req.session.currentUser = user;
         res.status(200).json({
           user,
@@ -84,7 +82,7 @@ module.exports = {
   },
 
   logout: (req, res) => {
-    if (req.session.isAuthenticated) {
+    if (req.session.loggedIn) {
       req.session.destroy(() => {
         res.status(204).end();
       });
