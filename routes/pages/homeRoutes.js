@@ -11,31 +11,21 @@ const {
 //findAll posts for home page
 router.get('/', async (req, res) => {
     try {
-        const postData = await Post.findAll({
-            attributes: ['id', 'title', 'description', 'content', 'img', 'created_at'],
+        const movieData = await Movie.findAll({
+            attributes: ['id', 'title', 'summary', 'poster'],
             include: [{
-                    model: Comment,
-                    attributes: ['id', 'content', 'parentPost', 'userId', 'created_at'],
-                    include: {
-                        model: User,
-                        attributes: ['username'],
-                    },
-                },
-                {
-                    model: User,
-                    attributs: ['username'],
-                },
-            ],
+                model: Post,
+                attributes: ['id', 'title', 'description', 'content', 'img', 'movieId', 'userId', 'created_at'],
+            }]
         })
         //gets clean data
-        const posts = postData.map((post) => post.get({
+        const movies = movieData.map((movie) => movie.get({
             plain: true
         }))
-        // console.log(posts)
-        res.render('forum-page', {
-            posts,
+        console.log(movies)
+        res.render('homepage', {
+            movies,
             loggedIn: req.session.loggedIn,
-            username: req.session.username,
             userId: req.session.userId
         });
     } catch (err) {
