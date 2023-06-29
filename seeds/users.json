@@ -1,18 +1,26 @@
 [
   {
-    "username": "tonystark",
-    "email": "ironman@example.com",
-    "password": "password1234"
+    "id": 1,
+    "username": "alphazeta",
+    "email": "rsmith@gmail.com",
+    "password": "12345678"
+  },
+  { 
+    "id": 2,
+    "username": "funrunner79",
+    "email": "jjones@gmail.com",
+    "password": "12345678"
   },
   {
-    "username": "steverogers",
-    "lastName": "Rogers",
-    "email": "captainamerica@example.com",
-    "password": "password1234"
+    "id": 3,
+    "username": "askmenot31",
+    "email": "jalcon33@gmail.com",
+    "password": "12345678"
   },
   {
-    "username": "carroldanvers",
-    "email": "captainmarvel@example.com",
-    "password": "password1234"
+    "id": 4,
+    "username": "almostwinning24", 
+    "email":  "rward@gmail.com",
+    "password": "12345678"
   }
 ]
