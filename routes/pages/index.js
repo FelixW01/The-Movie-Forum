@@ -1,14 +1,21 @@
 const router = require('express').Router();
-const { PageController } = require('../../controllers');
+const {
+    PageController,
+    UserController
+} = require('../../controllers');
 
-const isAuthenticated = require('../../middleware/isAuthenticated');
+const isAuth = require('../../middleware/isAuthenticated');
 
-// Static pages
-router.get('/', (req, res) => res.render('homepage'));
-router.get('/register', (req, res) => res.render('register'));
-router.get('/login', (req, res) => res.render('login'));
+const homeRoutes = require("./homeRoutes.js");
+
+
+router.use('/', homeRoutes);
+
+
 
 // Pages with data
-router.get('/dashboard', isAuthenticated, PageController.getDashboard);
+router.get('/dashboard', isAuth, PageController.getDashboard);
+router.get('/register', UserController.register);
+router.get('/login', UserController.login);
 
 module.exports = router;
