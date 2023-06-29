@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../../models/User');
+const User = require('../../models/user');
 const Post = require ('../../models/post');
 
 router.get('/', async (req, res) => {
@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
 
 router.get('/:id/posts', async (req, res) => {
     try {
-        
+        console.log('HERE');
       const userData = await User.findByPk(req.params.id, {
         include: [Post],
         where: {
