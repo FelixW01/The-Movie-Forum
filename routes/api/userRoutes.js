@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const User = require('../../models/User');
+const Post = require ('../../models/post');
 
 router.get('/', async (req, res) => {
     try{
@@ -41,6 +42,28 @@ router.post('/', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+router.get('/:id/posts', async (req, res) => {
+    try {
+        
+      const userData = await User.findByPk(req.params.id, {
+        include: [Post],
+        where: {
+          userId: req.params.id,
+        }
+      });
+
+      if (!userData) {
+        res.status(404).json({ message: 'Posts you make will appear here' });
+        return;
+      }
+  
+      res.status(200).json(userData);
+    } catch (err) {
+        console.log(err)
+      res.status(500).json(err);
+    }
+  });
 
 
 
