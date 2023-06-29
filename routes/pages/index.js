@@ -7,11 +7,9 @@ const {
 const isAuth = require('../../middleware/isAuthenticated');
 
 const homeRoutes = require("./homeRoutes.js");
-const dashboardRoutes = require("./dashboard.js");
 
 
 router.use('/', homeRoutes);
-router.use('/dashboard', dashboardRoutes);
 
 
 
