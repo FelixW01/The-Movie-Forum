@@ -1,10 +1,8 @@
-<h1 class="text-center mt-5">Media Forum App</h1>
-
 <div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+
+    {{#each movies as |movie|}}
+    {{> forum-cards movie}}
+    {{/each}}
+    
+    <h1>hi</h1>
 </div>
