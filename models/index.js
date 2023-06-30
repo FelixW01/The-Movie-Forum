@@ -28,7 +28,7 @@ User.hasMany(Post, {
   onDelete: 'CASCADE'
 });
 
-Post.belongsToMany(User, {
+Post.belongsTo(User, {
   through: {
     model: User
   }
