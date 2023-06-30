@@ -1,37 +1,33 @@
 [
   {
-    "id": 1,
-    "title": "Elemental",
+    "title": "SO GOOD",
     "description": "Too Funny",
     "content": "My child loved this film",
-    "img": "https://image.tmdb.org/t/p/original//8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 1,
     "userId": 2
   },
   {
-    "id": 2,
-    "title": "No Hard Feelings",
+    "title": "Click for a 420 word essay about I felt about the movie",
     "description": "Not Really",
     "content": "I tried to laugh... I tried.",
-    "img": "https://image.tmdb.org/t/p/original//8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 2,
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 1,
     "userId": 3
   },
   {
-    "id": 3,
-    "title": "The Little Mermaid",
+    "title": "Fish",
     "description": "Happy Child",
     "content": "My daughter enjoyed it, so I did too!",
-    "img": "https://image.tmdb.org/t/p/original//8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 3,
     "userId": 4
   },
   {
-    "id": 4,
-    "title": "The Flash",
+    "title": "Fast boy",
     "description": "I'm a fan again",
     "content": "This is the best movies ever",
-    "img": "https://image.tmdb.org/t/p/original//8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 4,
     "userId": 1
   }
