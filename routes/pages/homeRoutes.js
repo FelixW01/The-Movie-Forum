@@ -33,11 +33,7 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
-// , {
-//     model: User,
-//     attributes: ['username']
-// }
-//find one post, include Comment, User
+
 router.get('/movie/:id', async (req, res) => {
     try {
         const movieData = await Movie.findOne({
@@ -77,35 +73,51 @@ router.get('/movie/:id', async (req, res) => {
     }
 });
 
-// get many post
-// router.get('/movie:/id', async (req, res) => {
-//     try {
-//         const postData = await Post.findAll({
-//             attributes: ['id', 'title', 'description', 'content', 'img', 'movieId', 'userId', 'created_at'],
-//             include: {
-//                 model: User,
-//                 attributes: ['username'],
-//             },
-//         }, {
-//             model: User,
-//             attributes: ['username']
-//         })
-//         //gets clean data
-//         const posts = postData.map((post) => post.get({
-//             plain: true
-//         }))
-//         console.log(posts)
-//         res.render('forum-page', {
-//             posts,
-//             loggedIn: req.session.loggedIn,
-//             userId: req.session.userId
-//         });
-//     } catch (err) {
-//         console.log(err)
-//         res.status(500).json(err);
-//     }
-// });
-
+//localhost:3001/post:id
+//find one post, include Comment, User
+router.get('/post/:id', async (req, res) => {
+    try {
+        const postData = await Post.findOne({
+            where: {
+                id: req.params.id,
+            },
+            attributes: ['id', 'title', 'description', 'content', 'img', 'created_at'],
+            include: [{
+                    model: Comment,
+                    attributes: ['id', 'content', 'postId', 'userId', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['username'],
+                    },
+                },
+                {
+                    model: User,
+                    attributes: ['username'],
+                },
+            ],
+        });
+        if (postData) {
+            //gets clean data
+            const post = postData.get({
+                plain: true
+            });
+            console.log(post);
+            res.render('single-post', {
+                post,
+                loggedIn: req.session.loggedIn,
+                username: req.session.username,
+            })
+        } else {
+            res.status(404).json({
+                message: 'Invalid post id'
+            })
+            return;
+        }
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err);
+    }
+});
 
 
 
