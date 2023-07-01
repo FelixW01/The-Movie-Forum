@@ -1,26 +1,22 @@
 [
   {
-    "id": 1,
-    "userId": 1,
-    "username": "alphazeta",
-    "content": "This is the best movie ever"
+    "content": "This is the best movie ever",
+    "postId": 1,
+    "userId": 1
   },
   {
-  "id": 2,
-  "userId": 2,
-  "username": "funrunner79",
-  "content": "My child loved this film"
+    "content": "My child loved this film",
+    "postId": 1,
+    "userId": 2
   },
   {
-  "id": 3,
-  "userId": 3,
-  "username": "askmenot31",
-  "content": "I tried to laugh... I tried."
+    "content": "I tried to laugh... I tried.",
+    "postId": 1,
+    "userId": 3
   },
   {
-  "id": 4,
-  "userId": 4,
-  "username": "almostwinning24",
-  "content": "My daughter enjoyed it, so I did too!"
+    "content": "My daughter enjoyed it, so I did too!",
+    "postId": 1,
+    "userId": 4
   }
 ]

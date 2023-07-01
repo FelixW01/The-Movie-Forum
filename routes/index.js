@@ -8,4 +8,5 @@ router.use('/', pageRoutes);
 router.use('/api', apiRoutes);
 router.use('/movie', forumRoutes);
 
+
 module.exports = router;

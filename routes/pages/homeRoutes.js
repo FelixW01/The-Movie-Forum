@@ -8,6 +8,7 @@ const {
     Movie
 } = require('../../models');
 
+//localhost:3001/
 //findAll posts for home page
 router.get('/', async (req, res) => {
     try {
@@ -33,35 +34,38 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
-// , {
-//     model: User,
-//     attributes: ['username']
-// }
+
+//localhost:3001/post:id
 //find one post, include Comment, User
-router.get('/movie/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
     try {
-        const movieData = await Movie.findOne({
+        const postData = await Post.findOne({
             where: {
                 id: req.params.id,
             },
-            attributes: ['id', 'title', 'summary', 'poster'],
+            attributes: ['id', 'title', 'description', 'content', 'img', 'created_at'],
             include: [{
-                model: Post,
-                attributes: ['id', 'title', 'description', 'content', 'img', 'movieId', 'userId', 'created_at'],
-                include: {
+                    model: Comment,
+                    attributes: ['id', 'content', 'postId', 'userId', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['username'],
+                    },
+                },
+                {
                     model: User,
                     attributes: ['username'],
                 },
-            }]
-        })
-        if (movieData) {
+            ],
+        });
+        if (postData) {
             //gets clean data
-            const movie = movieData.get({
+            const post = postData.get({
                 plain: true
             });
-            console.log(movie);
-            res.render('forum-page', {
-                movie,
+            console.log(post);
+            res.render('single-post', {
+                post,
                 loggedIn: req.session.loggedIn,
                 username: req.session.username,
             })
@@ -77,36 +81,6 @@ router.get('/movie/:id', async (req, res) => {
     }
 });
 
-// get many post
-// router.get('/movie:/id', async (req, res) => {
-//     try {
-//         const postData = await Post.findAll({
-//             attributes: ['id', 'title', 'description', 'content', 'img', 'movieId', 'userId', 'created_at'],
-//             include: {
-//                 model: User,
-//                 attributes: ['username'],
-//             },
-//         }, {
-//             model: User,
-//             attributes: ['username']
-//         })
-//         //gets clean data
-//         const posts = postData.map((post) => post.get({
-//             plain: true
-//         }))
-//         console.log(posts)
-//         res.render('forum-page', {
-//             posts,
-//             loggedIn: req.session.loggedIn,
-//             userId: req.session.userId
-//         });
-//     } catch (err) {
-//         console.log(err)
-//         res.status(500).json(err);
-//     }
-// });
-
-
 
 
 
@@ -118,7 +92,7 @@ router.get('/register', (req, res) => {
 
 //login
 router.get('/login', (req, res) => {
-    if (req.session.isAuthenticated) {
+    if (req.session.loggedIn) {
         res.redirect('/');
         return;
     }
