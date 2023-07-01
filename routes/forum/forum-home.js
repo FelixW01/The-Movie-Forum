@@ -44,6 +44,44 @@ router.get('/', async (req, res) => {
     }
 });
 
-
+//find all movies for home
+router.get('/:id', async (req, res) => {
+    try {
+        const movieData = await Movie.findOne({
+            where: {
+                id: req.params.id,
+            },
+            attributes: ['id', 'title', 'summary', 'poster'],
+            include: [{
+                model: Post,
+                attributes: ['id', 'title', 'description', 'content', 'img', 'movieId', 'userId', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username'],
+                },
+            }]
+        })
+        if (movieData) {
+            //gets clean data
+            const movie = movieData.get({
+                plain: true
+            });
+            console.log(movie);
+            res.render('forum-page', {
+                movie,
+                loggedIn: req.session.loggedIn,
+                username: req.session.username,
+            })
+        } else {
+            res.status(404).json({
+                message: 'Invalid post id'
+            })
+            return;
+        }
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router

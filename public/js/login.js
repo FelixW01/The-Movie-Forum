@@ -6,16 +6,27 @@ const loginFormHandler = async event => {
   if (email && password) {
     const response = await fetch('/api/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        password
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/');
     } else {
-      const { message } = await response.json();
+      const {
+        message
+      } = await response.json();
       // eslint-disable-next-line no-undef
-      showAlert({ target: 'login-alert', message, type: 'danger' });
+      showAlert({
+        target: 'login-alert',
+        message,
+        type: 'danger'
+      });
     }
   }
 };

@@ -8,6 +8,7 @@ const {
     Movie
 } = require('../../models');
 
+//localhost:3001/
 //findAll posts for home page
 router.get('/', async (req, res) => {
     try {
@@ -28,45 +29,6 @@ router.get('/', async (req, res) => {
             loggedIn: req.session.loggedIn,
             userId: req.session.userId
         });
-    } catch (err) {
-        console.log(err)
-        res.status(500).json(err);
-    }
-});
-
-router.get('/movie/:id', async (req, res) => {
-    try {
-        const movieData = await Movie.findOne({
-            where: {
-                id: req.params.id,
-            },
-            attributes: ['id', 'title', 'summary', 'poster'],
-            include: [{
-                model: Post,
-                attributes: ['id', 'title', 'description', 'content', 'img', 'movieId', 'userId', 'created_at'],
-                include: {
-                    model: User,
-                    attributes: ['username'],
-                },
-            }]
-        })
-        if (movieData) {
-            //gets clean data
-            const movie = movieData.get({
-                plain: true
-            });
-            console.log(movie);
-            res.render('forum-page', {
-                movie,
-                loggedIn: req.session.loggedIn,
-                username: req.session.username,
-            })
-        } else {
-            res.status(404).json({
-                message: 'Invalid post id'
-            })
-            return;
-        }
     } catch (err) {
         console.log(err)
         res.status(500).json(err);
@@ -130,7 +92,7 @@ router.get('/register', (req, res) => {
 
 //login
 router.get('/login', (req, res) => {
-    if (req.session.isAuthenticated) {
+    if (req.session.loggedIn) {
         res.redirect('/');
         return;
     }
