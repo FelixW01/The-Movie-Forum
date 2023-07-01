@@ -19,10 +19,10 @@
 </head>
 
 <body>
-  {{> navbar isAuthenticated=this.isAuthenticated }}
+  {{> navbar loggedIn=this.loggedIn }}
   {{> toast}}
   {{{ body }}}
-  {{#if isAuthenticated}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
   {{!-- form validation for Bootstrap inputs --}}

@@ -19,7 +19,7 @@ const registrationHandler = async event => {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/');
     } else {
       const {
         message

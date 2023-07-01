@@ -5,6 +5,9 @@
   <div>
     <h4>{{description}}</h4>
     <div>
+      {{#if image}}
+        <figure><img src="image-source" /></figure>
+      {{/if}}
       <p>{{content}}</p>
     </div>
   </div>

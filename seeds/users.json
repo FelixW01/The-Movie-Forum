@@ -1,26 +1,22 @@
 [
   {
-    "id": 1,
     "username": "alphazeta",
     "email": "rsmith@gmail.com",
     "password": "12345678"
   },
-  { 
-    "id": 2,
+  {
     "username": "funrunner79",
     "email": "jjones@gmail.com",
     "password": "12345678"
   },
   {
-    "id": 3,
     "username": "askmenot31",
     "email": "jalcon33@gmail.com",
     "password": "12345678"
   },
   {
-    "id": 4,
-    "username": "almostwinning24", 
-    "email":  "rward@gmail.com",
+    "username": "almostwinning24",
+    "email": "rward@gmail.com",
     "password": "12345678"
   }
 ]
