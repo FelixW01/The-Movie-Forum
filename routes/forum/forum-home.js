@@ -44,36 +44,31 @@ router.get('/', async (req, res) => {
     }
 });
 
-//find one post, include Comment, User
-router.get('/post/:id', async (req, res) => {
+//find all movies for home
+router.get('/:id', async (req, res) => {
     try {
-        const postData = await Post.findOne({
+        const movieData = await Movie.findOne({
             where: {
                 id: req.params.id,
             },
-            attributes: ['id', 'title', 'description', 'content', 'img', 'created_at'],
+            attributes: ['id', 'title', 'summary', 'poster'],
             include: [{
-                    model: Comment,
-                    attributes: ['id', 'content', 'parentPost', 'userId', 'created_at'],
-                    include: {
-                        model: User,
-                        attributes: ['username'],
-                    },
-                },
-                {
+                model: Post,
+                attributes: ['id', 'title', 'description', 'content', 'img', 'movieId', 'userId', 'created_at'],
+                include: {
                     model: User,
                     attributes: ['username'],
                 },
-            ],
-        });
-        if (postData) {
+            }]
+        })
+        if (movieData) {
             //gets clean data
-            const post = postData.get({
+            const movie = movieData.get({
                 plain: true
             });
-            console.log(post);
-            res.render('single-post', {
-                post,
+            console.log(movie);
+            res.render('forum-page', {
+                movie,
                 loggedIn: req.session.loggedIn,
                 username: req.session.username,
             })

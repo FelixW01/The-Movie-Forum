@@ -17,7 +17,7 @@ Comment.init({
     type: DataTypes.STRING,
     allowNull: false
   },
-  parentPost: {
+  postId: {
     type: DataTypes.INTEGER,
     references: {
       model: 'posts',
@@ -26,7 +26,6 @@ Comment.init({
   },
   userId: {
     type: DataTypes.INTEGER,
-    allowNull: false,
     references: {
       model: 'users',
       key: 'id',
