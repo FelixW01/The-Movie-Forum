@@ -25,11 +25,12 @@ const seedDatabase = async () => {
     individualHooks: true,
   });
 
-  await Comment.bulkCreate(commentSeeds, {
+
+  await Post.bulkCreate(postSeeds, {
     individualHooks: true,
   });
 
-  await Post.bulkCreate(postSeeds, {
+  await Comment.bulkCreate(commentSeeds, {
     individualHooks: true,
   });
 
