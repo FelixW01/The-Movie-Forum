@@ -5,11 +5,14 @@
 body {
   background-color: #eeeeee;
 }
+<<<<<<< HEAD
 
 h1, h2 {
   font-family: 'Carter One', Courier, monospace ;
 }
 
+=======
+>>>>>>> 3076ce46a5ce13a2cef71a406cd0a4acc12ec7e8
 .logo-sm {
   width: 50px;
   height: 50px;
@@ -21,6 +24,12 @@ h1, h2 {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+h1 {
+  font-family: "Acme", sans-serif;
+}
+>>>>>>> 3076ce46a5ce13a2cef71a406cd0a4acc12ec7e8
 
 .homepage_bg {
   background-image: url("/images/cement-texture.avif");

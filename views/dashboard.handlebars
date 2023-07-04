@@ -1,1 +1,21 @@
-<h1 class="text-center mt-5">{{ welcomeMessage }}</h1>
+<div>
+  <div class="dashboard-container">
+    <div class="dashboard-box"><h2>Your Dashboard</h2></div>
+  </div>
+
+  {{#if posts.length}}
+<section>
+  {{#each posts as |post|}}
+
+    {{> dashboard-postedit post}}
+
+  {{/each}}
+</section>
+{{/if}}
+
+  <a class="new-post-btn" href="/dashboard/new"><button
+      type="submit"
+      class="btn post-button"
+    >+ Add New Post</button>
+  </a>
+</div>

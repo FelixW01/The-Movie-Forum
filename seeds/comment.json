@@ -1,11 +1,13 @@
 [
   {
     "content": "This is the best movie ever",
-    "userId": 1
+    "postId": 1,
+    "userId": 3
   },
   {
     "content": "My child loved this film",
-    "userId": 2
+    "postId": 1,
+    "userId": 3
   },
   {
     "content": "I tried to laugh... I tried.",

@@ -1,27 +1,29 @@
-<nav class="navbar navbar-expand-lg bg-light bg-light p-2">
-  <a class="navbar-brand" href="/"><img class="logo-sm img-fluid" src="/images/logo.png" alt="logo">Project 2</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    {{#if loggedIn}}
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item active ms-auto">
-        <a class="nav-link" href="/dashboard">Dashboard</span></a>
-      </li>
-      <li class="nav-item ms-auto">
-        <a class="nav-link" href="/" id="logout">Logout</a>
-      </li>
-    </ul>
-    {{else}}
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item active ms-auto">
-        <a class="nav-link" href="/login">Login</span></a>
-      </li>
-      <li class="nav-item ms-auto">
-        <a class="nav-link" href="/register">Signup</span></a>
-      </li>
-    </ul>
-    {{/if}}
-</nav>
+<div
+  class="navbar mb-2 shadow-lg bg-gradient-to-r from-blue-700 from-20% to-purple-800 via-40% to-rose-900 to-80% text-neutral-content text-white text-lg"
+>
+  <div class="flex-1 px-2 mx-2">
+    <span class="text-lg font-bold">
+      <a href="/">Movie Forum</a>
+    </span>
+  </div>
+  <a
+    class="btn btn-ghost btn-sm rounded-btn text-xl font-bold text-white lg:text-base"
+    href="/dashboard"
+  >Dashboard</a>
+  {{#if loggedIn}}
+    <a
+      class="btn btn-ghost btn-sm rounded-btn text-xl font-bold text-white lg:text-base"
+      href="/"
+      id="logout"
+    >Logout</a>
+  {{else}}
+    <a
+      class="btn btn-ghost btn-sm rounded-btn text-xl font-bold text-white lg:text-base"
+      href="/login"
+    >Login</a>
+    <a
+      class="btn btn-ghost btn-sm rounded-btn text-xl font-bold text-white lg:text-base"
+      href="/register"
+    >Sign Up</a>
+  {{/if}}
+</div>

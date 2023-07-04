@@ -7,7 +7,8 @@
     "dev": "nodemon server.js",
     "seed": "node seeds",
     "lint": "eslint --fix --ext .js .",
-    "test": "test"
+    "test": "test",
+    "build-css": "tailwindcss -i public/css/style.css -o public/css/test-style.css"
   },
   "author": "",
   "license": "ISC",
