@@ -1,14 +1,16 @@
 <div
   class="forum-post card w-96 shadow-xl p-20 bg-indigo-800 hover:bg-indigo-500"
 >
-  <h3><a href="/post/{{id}}" class="post-header">{{user.username}}</a></h3>
   <div>
-    <h4>{{description}}</h4>
-    <div>
-      {{#if image}}
-        <figure><img src="image-source" /></figure>
-      {{/if}}
-      <p>{{content}}</p>
-    </div>
+    <h3><a href="/post/{{id}}" class="post-header">{{title}}</a></h3>
+    <h5>{{description}}</h5>
   </div>
+
+  <div>
+    {{#if image}}
+      <figure><img src="image-source" /></figure>
+    {{/if}}
+    <p>{{content}}</p>
+  </div>
+
 </div>
