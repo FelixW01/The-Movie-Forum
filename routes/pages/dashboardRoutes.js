@@ -15,7 +15,7 @@ router.get('/', isAuth, (req, res) => {
             where: {
                 userId: req.session.userId,
             },
-            attributes: ['id', 'title', 'description', 'content', 'img', 'created_at'],
+            attributes: ['id', 'title', 'content', 'img', 'created_at'],
             include: [{
                     model: Comment,
                     attributes: ['id', 'content', 'userId', 'postId', 'created_at'],
