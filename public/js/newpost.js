@@ -2,6 +2,7 @@ const newPostFormHandler = async event => {
     event.preventDefault();
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
+    // const image = document.querySelector('#image')
 
     const response = await fetch('/api/post', {
         method: 'POST',
@@ -21,5 +22,5 @@ const newPostFormHandler = async event => {
     }
 }
 document
-    .querySelector('#new-post-form')
+    .querySelector('#post-create-form')
     .addEventListener('submit', newPostFormHandler);
