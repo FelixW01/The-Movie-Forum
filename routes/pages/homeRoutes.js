@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
             attributes: ['id', 'title', 'summary', 'poster'],
             include: [{
                 model: Post,
-                attributes: ['id', 'title', 'description', 'content', 'img', 'movieId', 'userId', 'created_at'],
+                attributes: ['id', 'title', 'content', 'img', 'movieId', 'userId', 'created_at'],
             }]
         })
         //gets clean data
@@ -43,7 +43,7 @@ router.get('/post/:id', async (req, res) => {
             where: {
                 id: req.params.id,
             },
-            attributes: ['id', 'title', 'description', 'content', 'img', 'created_at'],
+            attributes: ['id', 'title', 'content', 'img', 'created_at'],
             include: [{
                     model: Comment,
                     attributes: ['id', 'content', 'postId', 'userId', 'created_at'],
