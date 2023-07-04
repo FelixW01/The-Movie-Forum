@@ -3,10 +3,10 @@
     <div><h2>Your Dashboard</h2></div>
   </div>
   <section>
-    <form id="post-create-form">
       <div>
         <h2>Create New Post</h2>
       </div>
+      <form id="post-create-form" enctype="multipart/form-data">
       <div>
         <label for="movies">Choose a Movie:</label>
         <select id="movies" name="movies">
@@ -21,11 +21,11 @@
         <h3>Content</h3>
         <textarea name="content" id="content" cols="200" rows="5"></textarea>
         <h3>Image</h3>
-        <input type="file" id="image" name="postImage" />
+        <input type="file" id="postImage" name="postImage" />
         <div>
           <button
             class="btn btn-secondary btn-lg w-100 mt-4 p-6"
-            type="button"
+            type="submit"
           >Create</button>
         </div>
       </div>
