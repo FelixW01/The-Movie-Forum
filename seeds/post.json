@@ -1,7 +1,6 @@
 [
   {
-    "title": "SO GOOD",
-    "description": "Too Funny",
+    "title": "Too Funny",
     "content": "My child loved this film",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 1,
@@ -9,23 +8,20 @@
   },
   {
     "title": "Click for a 420 word essay about I felt about the movie",
-    "description": "Not Really",
     "content": "I tried to laugh... I tried.",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 1,
     "userId": 1
   },
   {
-    "title": "Fish",
-    "description": "Happy Child",
+    "title": "Happy Child",
     "content": "My daughter enjoyed it, so I did too!",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 3,
     "userId": 3
   },
   {
-    "title": "Fast boy",
-    "description": "I'm a fan again",
+    "title": "I'm a fan again",
     "content": "This is the best movies ever",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 4,
