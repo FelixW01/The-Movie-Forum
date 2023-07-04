@@ -1,9 +1,6 @@
 <section>
   <div class="post-container">
-    <div>
-    <h7><a href="/post/{{id}}" class="post-header">u/{{username}}</a></h7>
-   <h1>{{post.description}}</h1>
-    </div>
+    <h1>{{post.title}}</h1>
     <div>
       {{#if post.img}}
         <img
@@ -12,7 +9,6 @@
         />
       {{/if}}
       <p>{{post.content}}</p>
-
     </div>
     </div>
     

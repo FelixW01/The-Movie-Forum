@@ -5,7 +5,7 @@
     "content": "My child loved this film",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 1,
-    "userId": 1
+    "userId": 2
   },
   {
     "title": "Click for a 420 word essay about I felt about the movie",
@@ -13,7 +13,7 @@
     "content": "I tried to laugh... I tried.",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 1,
-    "userId": 1
+    "userId": 3
   },
   {
     "title": "Fish",
@@ -21,7 +21,7 @@
     "content": "My daughter enjoyed it, so I did too!",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 3,
-    "userId": 3
+    "userId": 4
   },
   {
     "title": "Fast boy",
@@ -29,6 +29,6 @@
     "content": "This is the best movies ever",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 4,
-    "userId": 2
+    "userId": 1
   }
 ]
