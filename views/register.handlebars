@@ -1,49 +1,22 @@
-<div class="bg-gradient-to-r from-blue-700 from-20% to-purple-800 via-40% to-rose-900 to-80%">
-  <div class="row">
-    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-      <form
-        id="registration-form"
-        class="registration-form shadow p-4 my-5 mx-auto bg-body rounded w-75 requires-validation"
-        novalidate
-      >
-        <div class="d-flex justify-content-center">
-          <img src="images/logo.png" />
-        </div>
-        <h2 class="text-center">Register</h2>
-        <div>
-          <label for="username" class="col-form-label">Username</label>
-          <div class="input-group has-validation">
-            <input type="text" class="form-control" id="username" required />
-            <div class="invalid-feedback">Please enter a last name</div>
-          </div>
-        </div>
-        <div>
-          <label for="email" class="col-form-label">Email</label>
-          <div class="input-group has-validation">
-            <input type="email" class="form-control" id="email" required />
-            <div class="invalid-feedback">Please enter an email</div>
-          </div>
-        </div>
-        <div>
-          <label for="password" class="col-form-label">Password</label>
-          <div class="input-group has-validation">
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              required
-            />
-            <div class="invalid-feedback">Please enter a password</div>
-          </div>
-        </div>
-        <button
-          type="submit"
-          class="btn btn-primary btn-lg w-100 mt-4 p-3"
-        >Submit</button>
-        <p class="text-center mt-3 mb-0">Already have an account?
-          <a href="/login">Login here</a></p>
-      </form>
+<div class="container mx-auto p-6 card w-6/12 lg:w-8/12">
+  <div class="card-title text-2xl text-center">Register</div>
+  <form  id="registration-form">
+  <div class="form-control border-none">
+    <p>Username</p>
+    <input type="text" placeholder="username" id="username" class="input p-2 rounded border-gray-800 border-solid bg-white">
+    <div class="invalid-feedback">Please enter a valid username.</div>
+    <p>Email</p>
+    <input type="text" placeholder="email" id="email" class="input p-2 rounded border-gray-800 border-solid bg-white">
+    <div class="invalid-feedback">Please enter a e-mail address.</div>
+    <p>Password</p>
+    <input type="password" placeholder="password" id="password" class="input p-2 rounded border-gray-800 border-solid bg-white">
+    <div class="invalid-feedback">Please enter a valid password.</div>
+    <button type="submit" class="btn btn-secondary btn-lg w-100 mt-4 p-6">
+      Submit
+    </button>
+    <p class="text-center p-2">Already have an account? <a href="/login">Login here.</a></p>
+    </form>
     </div>
-  </div>
 </div>
+
 <script src="js/register.js"></script>
