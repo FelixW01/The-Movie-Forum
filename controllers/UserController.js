@@ -13,17 +13,14 @@ module.exports = {
       },
     } = req;
     try {
-      const user = await User.create({
-        username,
-        email,
-        password,
-      });
+      const user = await User.create(req.body);
 
       delete user.password;
 
       req.session.save(() => {
+        req.session.userId = user.id;
+        req.session.username = user.username;
         req.session.loggedIn = true;
-        req.session.currentUser = user;
         res.status(200).json(user);
       });
     } catch (err) {
@@ -68,8 +65,9 @@ module.exports = {
       delete user.password;
 
       req.session.save(() => {
+        req.session.userId = user.id;
+        req.session.username = user.username;
         req.session.loggedIn = true;
-        req.session.currentUser = user;
         res.status(200).json({
           user,
           message: 'You are now logged in!',
