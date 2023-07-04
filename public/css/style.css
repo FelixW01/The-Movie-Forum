@@ -1,6 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   background-color: #eeeeee;
+}
+
+h1, h2 {
+  font-family: 'Carter One', Courier, monospace ;
 }
 
 .logo-sm {
@@ -14,9 +21,6 @@ body {
   cursor: pointer;
 }
 
-h1 {
-  font-family: 'Acme', sans-serif;
-}
 
 .homepage_bg {
   background-image: url("/images/cement-texture.avif");

@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./public/src/**/*.{html,js}'],
+  content: ['./views/**/*.handlebars'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        carter: ["Carter One", "cursive";]
+      }
+    },
   },
   plugins: [],
 };
