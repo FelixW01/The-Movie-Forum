@@ -1,32 +1,36 @@
-<div>
+<div class="h-screen bg-gradient-to-t from-slate-400 to-slate-800">
   <div>
-    <div><h2>Your Dashboard</h2></div>
+    <div>
+      <h2>Your Dashboard</h2>
+    </div>
   </div>
   <section>
+    <div>
+      <h2 class="text-white">Create New Post</h2>
+    </div>
+    <form id="post-create-form" enctype="multipart/form-data">
       <div>
-        <h2>Create New Post</h2>
-      </div>
-      <form id="post-create-form" enctype="multipart/form-data">
-      <div>
-        <label for="movies">Choose a Movie:</label>
+        <label class="text-white" for="movies">Choose a Movie:</label>
         <select id="movies" name="movies">
           {{#each movies as |movie|}}
 
-            {{> movie-selection movie}}
+          {{> movie-selection movie}}
 
           {{/each}}
         </select>
-        <h3>Title</h3>
-        <textarea name="title" id="title" cols="200" rows="2"></textarea>
-        <h3>Content</h3>
-        <textarea name="content" id="content" cols="200" rows="5"></textarea>
-        <h3>Image</h3>
+
+        <h3 class="text-white">Title</h3>
+
+        <textarea class="w-1/4 rounded-xl" name="title" id="title" cols="200" rows="2"></textarea>
+
+        <h3 class="text-white">Content</h3>
+
+        <textarea class="rounded-xl w-3/4 mx-20" name="content" id="content" cols="200" rows="5"></textarea>
+        <h3 class="text-white">Image</h3>
         <input type="file" id="postImage" name="postImage" />
         <div>
-          <button
-            class="btn btn-secondary btn-lg w-100 mt-4 p-6"
-            type="submit"
-          >Create</button>
+          <button class="btn btn-secondary btn-md w-1/6 mt-4 text-center h-12 p-6 rounded-xl"
+            type="submit">Create</button>
         </div>
       </div>
     </form>
