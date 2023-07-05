@@ -1,3 +1,20 @@
+<div class="container mx-auto p-6 card w-6/12 lg:w-8/12">
+  <div class="card-title text-2xl text-center">Login</div>
+  <form id="login-form">
+    <div id="login-alert"></div>
+    <div class="form-control border-none">
+      <p>Email</p>
+      <input type="text" placeholder="email" id="email" class="input p-2 rounded border-gray-800 border-solid bg-white">
+      <div class="invalid-feedback">Please enter an email address.</div>
+      <p>Password</p>
+      <input type="password" placeholder="password" id="password" class="input p-2 rounded border-gray-800 border-solid bg-white">
+      <div class="invalid-feedback">Please enter a password.</div>
+      <button type="submit" class="btn btn-secondary btn-lg w-100 mt-4 p-6 bg-indigo-500 opacity-100">Submit</button>
+      <p class="text-center p-2">Don't have an account? <a href="/register">Register here.</a></p>
+    </div>
+  </form>
+</div>
+{{!-- 
 <div class="container">
   <div class="row">
     <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
@@ -36,5 +53,5 @@
       </form>
     </div>
   </div>
-</div>
+</div> --}}
 <script src="js/login.js"></script>
