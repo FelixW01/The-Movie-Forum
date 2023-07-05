@@ -4,7 +4,10 @@ const path = require('path');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const helpers = require('./middleware/helpers');
-
+// const multer = require('multer');
+// const upload = multer({
+//   storage: multer.memoryStorage()
+// });
 const sequelize = require('./db/config');
 const routes = require('./routes');
 
@@ -25,6 +28,7 @@ const sessionConfig = {
   }),
 };
 
+
 app.use(session(sessionConfig));
 
 app.engine('handlebars', hbs.engine);
@@ -35,6 +39,8 @@ app.use(express.urlencoded({
   extended: false
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.use(routes);
 

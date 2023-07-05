@@ -1,0 +1,30 @@
+<section class="edit-card-container">
+  <div class="new-post-container">
+    <div class="new-post-header">
+      <h2>Edit Post</h2>
+    </div>
+    <form id="edit-form">
+      <div class="edit-post-title">
+        <label class="edit-label">Title</label>
+        <input id="edit-title" type="text" name="edit-title" />
+        <label class="edit-label">Content</label>
+        <textarea
+          name="edit-content"
+          id="edit-content"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+
+      <button type="submit" id="update-btn" class="btn edit-post-btn">Update
+        Post</button>
+
+      <button type="submit" id="delete-btn" class="btn edit-post-btn">Delete
+        Post</button>
+
+    </form>
+  </div>
+</section>
+
+<script src="/js/editpost.js"></script>
+<script src="/js/deletepost.js"></script>
