@@ -1,14 +1,16 @@
-<div
-  class="forum-post card w-96 shadow-xl p-20 bg-indigo-800 hover:bg-indigo-500"
->
-  <h3><a href="/post/{{id}}" class="post-header">{{user.username}}</a></h3>
+<div class="forum-post card w-96 shadow-xl p-20 bg-red-50 hover:bg-indigo-500">
   <div>
-    <h4>{{description}}</h4>
-    <div>
-      {{#if image}}
-        <figure><img src="image-source" /></figure>
-      {{/if}}
-      <p>{{content}}</p>
-    </div>
+    <h3><a href="/post/{{id}}" class="post-header">{{title}}</a></h3>
   </div>
+
+  <div>
+    {{#if img}}
+      <img
+        src="https://image.tmdb.org/t/p/original/{{img}}"
+        alt="img_content"
+      />
+    {{/if}}
+    <p>{{content}}</p>
+  </div>
+
 </div>

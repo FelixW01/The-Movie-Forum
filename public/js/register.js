@@ -35,5 +35,5 @@ const registrationHandler = async event => {
 };
 
 document
-  .querySelector('.registration-form')
+  .querySelector('#registration-form')
   .addEventListener('submit', registrationHandler);

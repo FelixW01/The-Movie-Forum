@@ -1,0 +1,21 @@
+<div
+  class="forum-post card w-96 shadow-xl p-20 bg-gray-300 hover:bg-gray-100"
+>
+    <h5>u/{{user.username}}</h5>
+  <h4><a href="/post/{{id}}" class="dashboard-title">{{title}}</a></h4>
+
+  <div>
+    
+      {{#if img}}
+        <img
+          src="https://image.tmdb.org/t/p/original/{{img}}"
+          alt="img_content"
+        />
+      {{/if}}
+
+      <p>{{content}}</p>
+      <a href="/dashboard/edit/{{id}}" class="dashboard-edit">Edit</a>
+    </div>
+    </div>
+  </div>
+</div>
