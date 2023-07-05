@@ -49,7 +49,7 @@ router.post('/', async (req, res) => {
             movieId: req.body.movieId
 
         });
-        console.log(postData.img, "<<<<<<<<<<<<<<<< here!");
+        console.log(postData.movieId, "<<<<<<<<<<<<<<<< here!");
         // console.log(postData.movieId, "aaaaaaaaa here<<<<<<<<<");
         console.log('Post successfully created');
         res.status(200).json(postData);
