@@ -1,21 +1,21 @@
-<div
-  class="forum-post card w-96 shadow-xl p-20 bg-gray-300 hover:bg-gray-100"
->
-    <h5>u/{{user.username}}</h5>
-  <h4><a href="/post/{{id}}" class="dashboard-title">{{title}}</a></h4>
+<div class="group mt-0 bg-slate-300 hover:border-white hover:border-4 transition-colors duration-200 rounded-xl px-1 md:w-11/12 mx-auto w-5/6 drop-shadow-lg">
 
-  <div>
-    
+  <div class="flex gap-3 p-1">
       {{#if img}}
-        <img
+        <img class="block w-24 rounded-xl"
           src="https://image.tmdb.org/t/p/original/{{img}}"
-          alt="img_content"
-        />
+          alt="img_content"/>
+      <div class=" w-11/12 h-11/12 float-right">
+      <h5 class="font-bold">{{user.username}}</h5>
+      <h4 class="font-extrabold"><a href="/post/{{id}}" class="dashboard-title">{{title}}</a></h4>
       {{/if}}
-
       <p>{{content}}</p>
       <a href="/dashboard/edit/{{id}}" class="dashboard-edit">Edit</a>
-    </div>
-    </div>
+      </div>
   </div>
 </div>
+
+
+
+
+
