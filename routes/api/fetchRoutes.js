@@ -1,18 +1,24 @@
-const movieUrl = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=0cf4a573790d3bdae8c90dfbc0c91d5f';
+const movieUrl = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&api_key=0cf4a573790d3bdae8c90dfbc0c91d5f';
 
 async function getMovies() {
   const movieData = await fetch(movieUrl).then(res => res.json());
   if (movieData.results) {
     const movies = movieData.results;
-    const formattedMovies = movies.map(movie => {
-      const formattedMovie = {
-        id: movie.id,
-        title: movie.title,
-        poster: movie.poster_path,
-        summary: movie.overview,
-      };
-      return JSON.stringify(formattedMovie);
-    });
+    let i = 0;
+    let formattedMovies = [];
+
+    for (const movie of movies) {
+      if (i < 20) {
+        const formattedMovie = {
+          id: movie.id,
+          title: movie.title,
+          poster: movie.poster_path,
+          summary: movie.overview,
+        };
+        formattedMovies.push(formattedMovie);
+      }
+      i++;
+    }
 
     const fs = require('fs');
     const path = '../../seeds/api.json';
