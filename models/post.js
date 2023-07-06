@@ -22,7 +22,7 @@ Post.init({
     allowNull: false
   },
   img: {
-    type: DataTypes.BLOB,
+    type: DataTypes.BLOB('long'),
   },
   movieId: {
     type: DataTypes.INTEGER,
