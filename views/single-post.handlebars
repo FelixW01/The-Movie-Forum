@@ -1,8 +1,8 @@
-<section>
-  <div class="post-container">
+<div class="h-full sm:h-full bg-gradient-to-t from-slate-400 to-slate-800">
+  <div class="post-container w-7/12 md:w-8/12 mx-auto bg-slate-300 rounded-xl drop-shadow-lg px-4 py-2">
     <div>
-    <h7><a href="/post/{{id}}" class="post-header">u/{{username}}</a></h7>
-   <h1>{{post.title}}</h1>
+    <h7><a href="/post/{{id}}" class="post-header text- md:text-lg mt-6">u/{{username}}</a></h7>
+   <h1 class="text-4xl font-bold text-center text-slate-700 pb-2">{{post.title}}</h1>
     </div>
     <div>
       {{#if post.img}}
@@ -11,19 +11,21 @@
           alt="img_content"
         />
       {{/if}}
-      <p>{{post.content}}</p>
+
+      <p class="py-3">{{post.content}}</p>
+
     </div>
     </div>
     
-    <div> 
-      <h1>Discussions</h1> 
-    </div>
+    <div class="discussion-container w-7/12 md:w-8/12 mx-auto bg-slate-300 rounded-xl px-4 text-xl font-bold drop-shadow-lg pb-4 my-2">Discussions: </div>
+
     
         {{#each post.comments as |comment|}}
         <div>
           {{> comments comment}}
         </div>
         {{/each}}
+
 
   {{#if loggedIn}}
 <div>
@@ -40,3 +42,4 @@
 </section>
 
 <script src="/js/comment.js"></script>
+
