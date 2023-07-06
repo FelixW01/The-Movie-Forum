@@ -1,10 +1,10 @@
-<div class="h-screen bg-gradient-to-t from-slate-400 to-slate-800">
+<div class="h-screen bg-gradient-to-t from-slate-400 to-slate-800 py-3">
 
-  <div>
+  <div class="">
     <h1 class="text-center text-6xl text-white title">{{movie.title}}</h1>
   </div>
 
-  <div class=" grid grid-cols-4 my-0 mt-2 w-12/12 drop-shadow-lg px-6 h-4/12 gap-y-2 gap-x-0">
+  <div class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-0 mt-2 w-12/12 drop-shadow-lg px-6 h-4/12 gap-y-2 gap-x-0">
 
     {{#each movie.posts as |post|}}
 
