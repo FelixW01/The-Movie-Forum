@@ -5,15 +5,15 @@
     <h1 class="text-center text-6xl text-white title">{{movie.title}}</h1>
   </div>
 
-<div class=" grid grid-cols-4 my-0 mt-2 w-12/12 drop-shadow-lg px-6 h-4/12 gap-y-2 gap-x-0">
+  <div class=" grid grid-cols-4 my-0 mt-2 w-12/12 drop-shadow-lg px-6 h-4/12 gap-y-2 gap-x-0">
 
-  {{#each movie.posts as |post|}}
+    {{#each movie.posts as |post|}}
 
     {{> post-card post}}
 
-  {{/each}}
+    {{/each}}
 
 
-</div>
+  </div>
 
 </div>
