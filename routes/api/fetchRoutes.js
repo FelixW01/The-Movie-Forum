@@ -1,4 +1,6 @@
-const movieUrl = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&api_key=0cf4a573790d3bdae8c90dfbc0c91d5f';
+require('dotenv').config();
+const key = process.env.DB_KEY
+const movieUrl = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&api_key='+ key;
 
 async function getMovies() {
   const movieData = await fetch(movieUrl).then(res => res.json());
