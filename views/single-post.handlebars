@@ -1,8 +1,8 @@
-<div class="h-full sm:h-full bg-gradient-to-t from-slate-400 to-slate-800">
-  <div class="post-container w-7/12 md:w-8/12 mx-auto bg-slate-300 rounded-xl drop-shadow-lg px-4 py-2">
-    <div>
-    <h7 class="post-header text- md:text-lg mt-6">u/{{username}}</h7>
-   <h1 class="text-4xl font-bold text-center text-slate-700 pb-2">{{post.title}}</h1>
+<div class="h-screen sm:h-full bg-gradient-to-t from-slate-400 to-slate-800">
+  
+  <div class="post-container w-11/12 md:w-8/12 mx-auto bg-slate-300 rounded-xl drop-shadow-lg px-2 py-2"><div>
+  
+   <h1 class="text-3xl font-bold text-center text-slate-700 pb-2">{{post.title}}</h1>
     </div>
     <div>
       {{#if post.img}}
@@ -12,12 +12,12 @@
       {{/if}}
 
       <p class="py-3">{{post.content}}</p>
+        <h2 class="post-header font-semibold md:text-lg mt-6">{{username}}</h2>
 
     </div>
     </div>
     
-    <div class="discussion-container w-7/12 md:w-8/12 mx-auto bg-slate-300 rounded-xl px-4 text-xl font-bold drop-shadow-lg pb-4 my-2">Discussions: 
-
+    <div class="discussion-container w-11/12 md:w-8/12 mx-auto bg-slate-300 rounded-xl px-4 text-xl font-bold drop-shadow-lg pb-4 my-2">Discussions: 
         {{#each post.comments as |comment|}}
         <div>
           {{> comments comment}}
@@ -29,7 +29,7 @@
 <div>
         <form id="comment-form">
         <p>Leave comment: </p>
-        <textarea name="comment-body" id="comment" cols="50" rows="6"></textarea>
+        <textarea class="w-full" name="comment-body" id="comment" cols="50" rows="6"></textarea>
         <div>
        <button class="btn" id="comment-btn" type="submit">Submit</button>
        </div>

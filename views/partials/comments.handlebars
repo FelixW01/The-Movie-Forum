@@ -4,11 +4,12 @@
     <div class="comment-date">
       <p>
         {{! not rendering }}
-        u/{{user.username}}
+        {{user.username}}
         on
         {{formatDate created_at}}
       </p>
     </div>
+    
     <p class="comment-body">
       {{content}}
     </p>

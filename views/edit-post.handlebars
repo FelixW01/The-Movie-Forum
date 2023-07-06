@@ -1,7 +1,45 @@
-<section class="edit-card-container h-full sm:h-full bg-gradient-to-t from-slate-400 to-slate-800 ">
-  <div class="new-post-container">
+<div class="h-screen sm:h-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen bg-gradient-to-t from-slate-400 to-slate-900 flex items-center justify-center">
+  <div class="bg-slate-900 rounded-3xl drop-shadow-5xl sm:w-8/12 md:w-8/12 xl:w-6/12 lg:w-7/12 w-11/12 sm:px-12 px-4 py-3 sm:py-4 -mt-24">
+    <div class="mb-4">
+      <h2 class="text-4xl text-white text-center text-3xl font-bold">Edit Post</h2>
+    </div>
+    <form id="edit-form">
+      <div class="space-y-4">
+        <div>
+          <label class="text-white text-2xl">Title</label>
+          <input id="edit-title" type="text" name="edit-title" class="w-full p-2 rounded border-gray-800 border-solid bg-white">
+        </div>
+        <div>
+          <label class="text-white text-2xl">Content</label>
+          <textarea name="edit-content" id="edit-content" cols="30" rows="10" class="w-full p-2 rounded border-gray-800 border-solid bg-white"></textarea>
+        </div>
+        <div class="flex justify-center">
+          <button type="submit" id="update-btn" class="btn btn-secondary btn-sm sm:w-3/12 md:w-3/12 lg:w-3/12 2xl:w-1/6 w-5/12 bg-slate-400 border-slate-600 text-center p-1 rounded-2xl">Update Post</button>
+        </div>
+        <div class="flex justify-center">
+          <button type="submit" id="delete-btn" class="btn btn-secondary btn-sm sm:w-3/12 md:w-3/12 lg:w-3/12 2xl:w-1/6 w-5/12 bg-slate-400 border-slate-600 text-center rounded-2xl">Delete Post</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <section class="edit-card-container h-screen sm:h-screen bg-gradient-to-t from-slate-400 to-slate-800 ">
+  <div class="px-auto">
     <div class="new-post-header">
-      <h2>Edit Post</h2>
+      <h2 class="text-white text-center">Edit Post</h2>
     </div>
     <form id="edit-form">
       <div class="edit-post-title">
@@ -24,7 +62,7 @@
 
     </form>
   </div>
-</section>
+</section> --}}
 
 <script src="/js/editpost.js"></script>
 <script src="/js/deletepost.js"></script>
