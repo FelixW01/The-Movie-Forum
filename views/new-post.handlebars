@@ -1,4 +1,58 @@
-<div class="h-screen bg-gradient-to-t from-slate-400 to-slate-800">
+<div class="h-screen bg-gradient-to-t from-slate-400 to-slate-900 flex items-center justify-center">
+  <div class="bg-slate-900 rounded-3xl drop-shadow-5xl sm:w-7/12  w-10/12 sm:px-12 px-4 py-3 sm:py-4">
+    <div class="mb-4">
+      <h2 class="text-4xl text-white text-center text-3xl font-bold" style="font-family: 'Acme'">Create New Post</h2>
+    </div>
+    <form id="post-create-form" enctype="multipart/form-data">
+      <div class="space-y-4">
+        <div>
+          <label class="text-white text-2xl" for="movies" style="font-family: 'Acme'">Choose a Movie:</label>
+          <select id="movies" name="movies" class="w-full border border-gray-300 bg-white h-8 rounded-lg">
+            {{#each movies as |movie|}}
+            {{> movie-selection movie}}
+            {{/each}}
+          </select>
+        </div>
+        <div class="">
+          <h3 class="text-white text-2xl" style="font-family: 'Acme'">Title</h3>
+          <textarea class="w-full border border-white h-8 bg-white rounded-lg p-1 " name="title" id="title" cols="200" rows="2"></textarea>
+        </div>
+        <div>
+          <h3 class="text-white text-2xl" style="font-family: 'Acme'">Content</h3>
+          <textarea class="w-full border border-gray-300 bg-white  rounded-lg p-2" name="content" id="content" cols="200" rows="5"></textarea>
+        </div>
+        <div>
+          <h3 class="text-white mb-1"style="font-family: 'Acme'">Image</h3>
+          <input type="file" id="postImage" name="postImage" class="border w-full sm:w-full border-slate-800 border bg-white rounded-2xl p-0" />
+        </div>
+        <div class="text-center">
+          <button class="btn btn-secondary btn-sm sm:w-2/6 mt-4 lg:w-2/12 2xl:w-1/6 w-1/3 bg-slate-400 border-slate-600 text-center p-1 rounded-2xl" type="submit">Create</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="/js/newpost.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="h-screen bg-gradient-to-t from-slate-400 to-slate-800">
   <div>
     <div>
       <h2>Your Dashboard</h2>
@@ -37,4 +91,4 @@
   </section>
 </div>
 
-<script src="/js/newpost.js"></script>
+<script src="/js/newpost.js"></script> --}}
