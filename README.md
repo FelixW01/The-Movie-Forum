@@ -1,13 +1,16 @@
-# movie-forum-app
+# The Movie Forum
+## Deployed App 
+https://dry-cove-24471-f11ca301104d.herokuapp.com/
+
+## App Repo 
+https://github.com/FelixW01/movie-forum-app
 
   ## Table of Contents
-  *[Description](#description)
-
-  *[Installation](#installation)
-
-  *[Useage](#usage)
-
-  *[Tests](#tests)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
 
   ## Description
@@ -27,6 +30,10 @@
 
   ## Questions
   If you have any questions please contact one of the developers.
-  Ashley Braxton: 
+  #### Felix Willem
+  github: FelixW01 
+  Email: felixwillem01@yahoo.com.
+  
+  #### Ashley Braxton
   github- AshleyBraxton
   email- ashley.braxton25@gmail.com
