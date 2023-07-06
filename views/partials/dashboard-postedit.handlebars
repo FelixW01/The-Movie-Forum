@@ -3,7 +3,7 @@
   <div class="flex gap-3 p-1">
       {{#if img}}
         <img class="block w-24 rounded-xl"
-          src="https://image.tmdb.org/t/p/original/{{img}}"
+          src="data:image/png;base64,{{img}}"
           alt="img_content"/>
       <div class=" w-11/12 h-11/12 float-right">
       <h5 class="font-bold">{{user.username}}</h5>

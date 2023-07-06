@@ -33,10 +33,6 @@ const seedDatabase = async () => {
     individualHooks: true,
   });
 
-  await Comment.bulkCreate(commentSeeds, {
-    individualHooks: true,
-  });
-
   process.exit(0);
 };
 

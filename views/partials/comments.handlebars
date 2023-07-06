@@ -1,15 +1,16 @@
 <div class="comment-container">
   <div class="comment-header"></div>
   <div class="comment">
-    <p class="comment-body">
-      {{content}}
-    </p>
     <div class="comment-date">
       <p>
-        {{user.username}}
+        {{! not rendering }}
+        u/{{user.username}}
         on
         {{formatDate created_at}}
       </p>
     </div>
+    <p class="comment-body">
+      {{content}}
+    </p>
   </div>
 </div>
