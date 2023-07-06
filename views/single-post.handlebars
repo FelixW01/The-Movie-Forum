@@ -12,21 +12,31 @@
         />
       {{/if}}
       <p>{{post.content}}</p>
-
     </div>
     </div>
     
-    <div> Discussions </div>
+    <div> 
+      <h1>Discussions</h1> 
+    </div>
     
         {{#each post.comments as |comment|}}
-
-        <div class="Comment-container">
-
-        {{> comments comment}}
-
+        <div>
+          {{> comments comment}}
         </div>
-
         {{/each}}
 
-  
+  {{#if loggedIn}}
+<div>
+        <form id="comment-form">
+        <p>Leave comment: </p>
+        <textarea name="comment-body" id="comment" cols="50" rows="6"></textarea>
+        <div>
+       <button class="btn" id="comment-btn" type="submit">Submit</button>
+       </div>
+    </form>
+</div>
+{{/if}}
+
 </section>
+
+<script src="/js/comment.js"></script>

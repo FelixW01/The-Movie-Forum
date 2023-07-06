@@ -3,6 +3,125 @@
     "title": "Too Funny",
     "content": "My child loved this film",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 455476,
+    "userId": 1
+  },
+  {
+    "title": "Click for a 500 word essay about I felt about the movie",
+    "content": "I tried to laugh... I tried.",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+<<<<<<< HEAD
+    "movieId": 2,
+    "userId": 4
+  },
+  {
+    "title": "Happy Child",
+    "content": "My daughter enjoyed it, so I did too!",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 3,
+    "userId": 3
+  },
+  {
+    "title": "I'm a fan again",
+    "content": "This is the best movies ever",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 4,
+    "userId": 2
+  },
+
+   {
+    "title": "Too Funny",
+    "content": "My child loved this film",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 1,
+=======
+    "movieId": 455476,
+>>>>>>> acf2a48ae0296cfc62f622a9112f6d4c13f8a538
+    "userId": 1
+  },
+  {
+    "title": "Click for a 420 word essay about I felt about the movie",
+    "content": "I tried to laugh... I tried.",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 2,
+    "userId": 4
+  },
+  {
+    "title": "Happy Child",
+    "content": "My daughter enjoyed it, so I did too!",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 3,
+    "userId": 3
+  },
+  {
+    "title": "I'm a fan again",
+    "content": "This is the best movies ever",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 4,
+    "userId": 2
+  },
+
+   {
+    "title": "Too Funny",
+    "content": "My child loved this film",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 1,
+    "userId": 1
+  },
+  {
+    "title": "Click for a 420 word essay about I felt about the movie",
+    "content": "I tried to laugh... I tried.",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 2,
+    "userId": 4
+  },
+  {
+    "title": "Happy Child",
+    "content": "My daughter enjoyed it, so I did too!",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 3,
+    "userId": 3
+  },
+  {
+    "title": "I'm a fan again",
+    "content": "This is the best movies ever",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 4,
+    "userId": 2
+  },
+
+   {
+    "title": "Too Funny",
+    "content": "My child loved this film",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 1,
+    "userId": 1
+  },
+  {
+    "title": "Click for a 420 word essay about I felt about the movie",
+    "content": "I tried to laugh... I tried.",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 2,
+    "userId": 4
+  },
+  {
+    "title": "Happy Child",
+    "content": "My daughter enjoyed it, so I did too!",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 3,
+    "userId": 3
+  },
+  {
+    "title": "I'm a fan again",
+    "content": "This is the best movies ever",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
+    "movieId": 4,
+    "userId": 2
+  },
+  {
+    "title": "Too Funny",
+    "content": "My child loved this film",
+    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
     "movieId": 1,
     "userId": 1
   },
@@ -104,129 +223,14 @@
     "title": "Happy Child",
     "content": "My daughter enjoyed it, so I did too!",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 3,
+    "movieId": 455476,
     "userId": 3
   },
   {
     "title": "I'm a fan again",
     "content": "This is the best movies ever",
     "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 4,
-    "userId": 2
-  },
-  {
-    "title": "Too Funny",
-    "content": "My child loved this film",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 1,
-    "userId": 1
-  },
-  {
-    "title": "Click for a 420 word essay about I felt about the movie",
-    "content": "I tried to laugh... I tried.",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 2,
-    "userId": 4
-  },
-  {
-    "title": "Happy Child",
-    "content": "My daughter enjoyed it, so I did too!",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 3,
-    "userId": 3
-  },
-  {
-    "title": "I'm a fan again",
-    "content": "This is the best movies ever",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 4,
-    "userId": 2
-  },
-
-   {
-    "title": "Too Funny",
-    "content": "My child loved this film",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 1,
-    "userId": 1
-  },
-  {
-    "title": "Click for a 420 word essay about I felt about the movie",
-    "content": "I tried to laugh... I tried.",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 2,
-    "userId": 4
-  },
-  {
-    "title": "Happy Child",
-    "content": "My daughter enjoyed it, so I did too!",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 3,
-    "userId": 3
-  },
-  {
-    "title": "I'm a fan again",
-    "content": "This is the best movies ever",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 4,
-    "userId": 2
-  },
-
-   {
-    "title": "Too Funny",
-    "content": "My child loved this film",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 1,
-    "userId": 1
-  },
-  {
-    "title": "Click for a 420 word essay about I felt about the movie",
-    "content": "I tried to laugh... I tried.",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 2,
-    "userId": 4
-  },
-  {
-    "title": "Happy Child",
-    "content": "My daughter enjoyed it, so I did too!",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 3,
-    "userId": 3
-  },
-  {
-    "title": "I'm a fan again",
-    "content": "This is the best movies ever",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 4,
-    "userId": 2
-  },
-
-   {
-    "title": "Too Funny",
-    "content": "My child loved this film",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 1,
-    "userId": 1
-  },
-  {
-    "title": "Click for a 420 word essay about I felt about the movie",
-    "content": "I tried to laugh... I tried.",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 2,
-    "userId": 4
-  },
-  {
-    "title": "Happy Child",
-    "content": "My daughter enjoyed it, so I did too!",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 3,
-    "userId": 3
-  },
-  {
-    "title": "I'm a fan again",
-    "content": "This is the best movies ever",
-    "img": "/8riWcADI1ekEiBguVB9vkilhiQm.jpg",
-    "movieId": 4,
+    "movieId": 455476,
     "userId": 2
   }
 
