@@ -8,6 +8,7 @@ const storage = multer.memoryStorage()
 const upload = multer({
     storage: storage
 })
+const isAuth = require('../../middleware/isAuthenticated')
 
 router.get('/', async (req, res) => {
     try {
@@ -82,5 +83,28 @@ router.get('/:id/comments', async (req, res) => {
     }
 });
 
+router.put('/:id', isAuth, async (req, res) => {
+    try {
+        const postUpdate = await Post.update({
+            title: req.body.title,
+            content: req.body.content
+        }, {
+            where: {
+                id: req.params.id
+            },
+        });
+        if (!postUpdate) {
+            res.status(404).json({
+                message: 'Invalid post id!'
+            });
+            return;
+        }
+        res.status(200).json(postUpdate)
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err)
+    }
+
+})
 
 module.exports = router;
