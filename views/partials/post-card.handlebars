@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="group mt-3 bg-slate-300 hover:border-white hover:border-4 transition-colors duration-200 rounded-xl px-6 py-0 md:w-11/12 mx-auto w-5/6 drop-shadow-lg">
 =======
 >>>>>>> acf2a48ae0296cfc62f622a9112f6d4c13f8a538
+=======
+<div
+  class="group mt-3 bg-slate-300 hover:border-white hover:border-4 transition-colors duration-200 rounded-xl px-6 py-2 md:w-11/12 mx-auto w-5/6 drop-shadow-lg"
+>
+>>>>>>> 5729d422a7e33bb2c283e4268ceb106d03a3d5d7
 
-<div class="forum-post card w-96 shadow-xl p-20 bg-red-50 hover:bg-indigo-500">
   <div>
     u/{{user.username}}
     <h3><a href="/post/{{id}}" class="post-header">{{title}}</a></h3>
@@ -11,37 +16,10 @@
 
   <div>
     {{#if img}}
-      <img src="data:image/png;base64,{{img}}" alt="img_content" />
 
-<div class="group mt-3 bg-slate-300 hover:border-white hover:border-4 transition-colors duration-200 rounded-xl px-6 py-2 md:w-11/12 mx-auto w-5/6 drop-shadow-lg">
-
-    <div>
-    u/{{user.username}}
-    <h3><a href="/post/{{id}}" class="post-header">{{title}}</a></h3>
-  </div>
-
-  <div>
-    {{#if img}}
       <img src="data:image/png;base64,{{img}}" alt="img_content" />
 
     {{/if}}
     <p class="text-center text-lg font-semibold">{{content}}</p>
   </div>
-
 </div>
-
-
-  {{!-- <div class="flex gap-3 p-1 shadow-xl">
-      {{#if img}}
-        <img class="block w-24 rounded-xl"
-          src="https://image.tmdb.org/t/p/original/{{img}}"
-          alt="img_content"/>
-      <div class=" w-11/12 h-11/12 float-right">
-      <h5 class="font-bold">{{user.username}}</h5>
-      <h4 class="font-extrabold"><a href="/post/{{id}}" class="dashboard-title">{{title}}</a></h4>
-      {{/if}}
-      <p>{{content}}</p>
-      <a href="/dashboard/edit/{{id}}" class="dashboard-edit">Edit</a>
-      </div>
-  </div>
-</div> --}}
