@@ -2,20 +2,18 @@ const newPostFormHandler = async event => {
     event.preventDefault();
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
-    // const image = document.querySelector('input[type=file]');
+    const image = document.querySelector('input[type=file]').files[0];
     const movieId = document.querySelector('#movies').value.trim();
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('content', content);
+    formData.append('movieId', movieId);
+    formData.append('image', image);
+
 
     const response = await fetch('/api/post', {
         method: 'POST',
-        body: JSON.stringify({
-            movieId,
-            title,
-            content,
-            // image
-        }),
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        body: formData,
     });
 
     if (response.ok) {
