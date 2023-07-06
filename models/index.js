@@ -40,7 +40,7 @@ User.hasMany(Comment, {
   onDelete: 'CASCADE',
 });
 
-Comment.belongsToMany(User, {
+Comment.belongsTo(User, {
   through: {
     model: User
   }
