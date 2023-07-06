@@ -1,57 +1,29 @@
-<div class="container mx-auto p-6 card w-6/12 lg:w-8/12">
-  <div class="card-title text-2xl text-center">Login</div>
-  <form id="login-form">
-    <div id="login-alert"></div>
-    <div class="form-control border-none">
-      <p>Email</p>
-      <input type="text" placeholder="email" id="email" class="input p-2 rounded border-gray-800 border-solid bg-white">
-      <div class="invalid-feedback">Please enter an email address.</div>
-      <p>Password</p>
-      <input type="password" placeholder="password" id="password" class="input p-2 rounded border-gray-800 border-solid bg-white">
-      <div class="invalid-feedback">Please enter a password.</div>
-      <button type="submit" class="btn btn-secondary btn-lg w-100 mt-4 p-6 bg-indigo-500 opacity-100">Submit</button>
-      <p class="text-center p-2">Don't have an account? <a href="/register">Register here.</a></p>
+<div class="h-screen sm:h-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen bg-gradient-to-t from-slate-400 to-slate-900 flex items-center justify-center">
+  <div class="bg-slate-900 rounded-3xl drop-shadow-5xl sm:w-8/12 md:w-8/12 xl:w-6/12 lg:w-7/12 w-8/12 sm:px-12 px-4 py-3 sm:py-4 -mt-24">
+    <div class="mb-4">
+      <h2 class="text-4xl text-white text-center text-3xl font-bold">Login</h2>
     </div>
-  </form>
-</div>
-{{!-- 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-      <form
-        id="login-form"
-        class="login-form shadow p-4 my-5 mx-auto bg-body rounded w-75 requires-validation"
-        novalidate
-      >
-        <div id="login-alert"></div>
-        <h1 class="text-center">Login</h1>
+    <form id="login-form">
+      <div id="login-alert"></div>
+      <div class="space-y-4">
         <div>
-          <label for="email" class="form-label">Email</label>
-          <div class="input-group has-validation">
-            <input type="email" class="form-control" id="email" required />
-            <div class="invalid-feedback">Please enter an email</div>
-          </div>
+          <p class="text-white text-2xl">Email</p>
+          <input type="text" placeholder="email" id="email" class="w-full p-2 rounded border-gray-800 border-solid bg-white">
+          <div class="text-red-500">Please enter an email address.</div>
         </div>
         <div>
-          <label for="password" class="form-label">Password</label>
-          <div class="input-group has-validation">
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              required
-            />
-            <div class="invalid-feedback">Please enter a password</div>
-          </div>
+          <p class="text-white text-2xl">Password</p>
+          <input type="password" placeholder="password" id="password" class="w-full p-2 rounded border-gray-800 border-solid bg-white">
+          <div class="text-red-500">Please enter a password.</div>
         </div>
-        <button
-          type="submit"
-          class="btn btn-primary btn-lg w-100 mt-4 p-3"
-        >Submit</button>
-        <p class="text-center mt-3 mb-0">Don't have an account?
-          <a href="/register">Register here</a></p>
-      </form>
-    </div>
+        <div class="flex justify-center">
+          <button type="submit" class="btn btn-secondary btn-sm sm:w-3/12 md:w-3/12 lg:w-3/12 2xl:w-1/6 w-4/12 bg-slate-400 border-slate-600 text-center p-1 rounded-2xl">Submit</button>
+        </div>
+        <p class="text-white text-center p-2">Don't have an account? <a href="/register" class="text-indigo-500">Register here.</a></p>
+      </div>
+    </form>
   </div>
-</div> --}}
+</div>
+
+
 <script src="js/login.js"></script>

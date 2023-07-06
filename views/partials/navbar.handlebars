@@ -1,22 +1,26 @@
 <div class="navbar mb-1 shadow-lg bg-slate-900 text-neutral-content text-white text-lg">
-  <div class="flex-1 px-2 mx-2">
-    <span class="text-white text-lg font-bold">
-      <a class="sm:text-4xl text-xl" style="font-family: 'Acme'" href="/">Movie Forum</a>
-    </span>
-  </div>
+  
+  
+  <div class="flex px-0 mx-2 w-full lg:w-full">
 
-  <a class="btn text-base sm:text-2xl mx-auto btn-ghost btn-sm rounded-btn text-2xl font-bold text-white" style="font-family: 'Acme'" href="/dashboard">Dashboard</a>
+  <a class="leading-tight hover:text-yellow-100 w-12 lg:w-28 text-center sm:text-center sm:leading-none sm:text-4xl text-md" style="font-family: 'Acme'" href="/">Movie Forum</a>
+
+  <div class="flex ml-8 sm:ml-52 md:ml-56 lg:ml-96 w-full sm:w-full lg:w-11/12 lg:ml_auto justify-end">
+    
+  <a class="btn text-sm sm:text-2xl mx-0 px-1 sm:px-3 btn-ghost btn-sm rounded-btn text-2xl font-bold text-white" style="font-family: 'Acme'" href="/dashboard">Dashboard</a>
 
   {{#if loggedIn}}
 
-  <a class="btn text-base mx-auto btn-ghost btn-sm rounded-btn sm:text-2xl font-bold text-white" style="font-family: 'Acme'" type="submit" href="/dashboard/new">+ Add New Post</a>
+  <a class="btn text-sm mx-0 btn-ghost px-1 sm:px-3 btn-sm rounded-btn sm:text-2xl font-bold text-white" style="font-family: 'Acme'" type="submit" href="/dashboard/new">+ Add New Post</a>
   
-  <a class="btn text-base mx-auto btn-ghost btn-sm rounded-btn text-2xl font-bold sm:text-2xl text-white" style="font-family: 'Acme'" href="/dashboard/new" href="/" id="logout">Logout</a>
+  <a class="btn btn-ghost btn-sm text-sm mx-0 btn-ghost px-1 sm:px-3 btn-sm rounded-btn text-2xl font-bold sm:text-2xl text-white" style="font-family: 'Acme'" href="/dashboard/new" href="/" id="logout">Logout</a>
 
   {{else}}
-  <a class="btn text-base mx-auto btn-ghost btn-sm rounded-btn text-2xl font-bold sm:text-2xl text-white" style="font-family: 'Acme'" href="/login">Login</a>
+  <a class="btn hover:text-yellow-100 text-sm mx-0 btn-ghost px-1 btn-sm sm:px-3 rounded-btn text-2xl font-bold sm:text-2xl text-white" style="font-family: 'Acme'" href="/login">Login</a>
 
-  <a class="btn text-base mx-auto btn-ghost btn-sm rounded-btn text-2xl font-bold sm:text-2xl text-white" style="font-family: 'Acme'" href="/register">Sign Up</a>
+  <a class="btn hover:text-yellow-100 text-sm mx-0 btn-ghost px-1 btn-sm rounded-btn text-2xl font-bold sm:text-2xl text-white" style="font-family: 'Acme'" href="/register">Sign Up</a>
   {{/if}}
+  </div>
+  </div>
 </div>
 
