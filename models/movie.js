@@ -18,7 +18,7 @@ Movie.init({
         allowNull: false
     },
     summary: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
     },
     poster: {
         type: DataTypes.STRING,

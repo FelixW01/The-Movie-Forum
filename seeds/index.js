@@ -8,7 +8,7 @@ const {
 } = require('../models');
 
 const userSeeds = require('./users.json');
-const movieSeeds = require('./movie.json');
+const movieSeeds = require('./api.json');
 const commentSeeds = require('./comment.json');
 const postSeeds = require('./post.json');
 
@@ -32,6 +32,7 @@ const seedDatabase = async () => {
   await Comment.bulkCreate(commentSeeds, {
     individualHooks: true,
   });
+
 
   process.exit(0);
 };
