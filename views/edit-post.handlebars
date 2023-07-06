@@ -1,25 +1,28 @@
 <section class="edit-card-container h-full sm:h-full bg-gradient-to-t from-slate-400 to-slate-800 ">
-  <div class="new-post-container">
+  <div class="new-post-container bg-slate-300 rounded-xl p-4 w-8/12 md:w-6/12 mx-auto">
     <div class="new-post-header">
-      <h2>Edit Post</h2>
+      <h2 class="ml-4 pt-4 text-xl font-bold text-center">Edit Post</h2>
     </div>
     <form id="edit-form">
       <div class="edit-post-title">
-        <label class="edit-label">Title</label>
-        <input id="edit-title" type="text" name="edit-title" />
-        <label class="edit-label">Content</label>
+        {{!-- <label class="edit-label">Title</label> --}}
+        <p class="edit-label">Title</p>
+        <input id="edit-title" type="text" name="edit-title" class="bg-white" />
+        {{!-- <label class="edit-label">Content</label> --}}
+        <p class="edit-label">Content</p>
         <textarea
           name="edit-content"
           id="edit-content"
           cols="30"
           rows="10"
+          class="bg-white"
         ></textarea>
       </div>
 
-      <button type="submit" id="update-btn" class="btn edit-post-btn">Update
+      <button type="submit" id="update-btn" class="btn edit-post-btn opacity-100 bg-violet-800">Update
         Post</button>
 
-      <button type="submit" id="delete-btn" class="btn edit-post-btn">Delete
+      <button type="submit" id="delete-btn" class="btn edit-post-btn opacity-100 bg-red-700">Delete
         Post</button>
 
     </form>
