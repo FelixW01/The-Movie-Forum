@@ -1,8 +1,8 @@
-<div class="h-screen sm:h-full bg-gradient-to-t from-slate-400 to-slate-800">
-  
-  <div class="post-container w-11/12 md:w-8/12 mx-auto bg-slate-300 rounded-xl drop-shadow-lg px-2 py-2"><div>
-  
-   <h1 class="text-3xl font-bold text-center text-slate-700 pb-2">{{post.title}}</h1>
+<div class="h-full sm:h-full bg-gradient-to-t from-slate-400 to-slate-800">
+  <div class="post-container w-7/12 md:w-8/12 mx-auto bg-slate-300 rounded-xl drop-shadow-lg px-4 py-2">
+    <div>
+    <h7 class="post-header text- md:text-lg mt-6">u/{{post.user.username}}</h7>
+   <h1 class="text-4xl font-bold text-center text-slate-700 pb-2">{{post.title}}</h1>
     </div>
     <div>
       {{#if post.img}}
