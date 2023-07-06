@@ -23,7 +23,7 @@ async function getMovies() {
     }
 
     const fs = require('fs');
-    const path = '../../seeds/api.json';
+    const path = '../../seeds/movie.json';
 
     fs.writeFile(path, JSON.stringify(formattedMovies), (err) => {
       if (err) {
