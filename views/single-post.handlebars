@@ -6,10 +6,9 @@
     </div>
     <div>
       {{#if post.img}}
-        <img
-          src="https://image.tmdb.org/t/p/original/{{post.img}}"
-          alt="img_content"
-        />
+
+        <img src="data:image/png;base64,{{post.img}}" alt="img_content" />
+        
       {{/if}}
 
       <p class="py-3">{{post.content}}</p>
