@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const Post = require('../../models/post');
 const Comment = require('../../models/comment');
-// const multer = require('multer');
-// const upload = multer({
-//     storage: multer.memoryStorage()
-// });
+const fs = require('fs');
+const multer = require('multer');
+// Set up storage for uploaded files
+const storage = multer.memoryStorage()
+const upload = multer({
+    storage: storage
+})
 
 router.get('/', async (req, res) => {
     try {
@@ -37,19 +40,18 @@ router.delete('/:id', (req, res) => {
 });
 
 
-// img: req.file,
-// upload.single('postImage')
-// img: req.file,
-router.post('/', async (req, res) => {
+router.post('/', upload.single('image'), async (req, res) => {
     try {
+        const image = req.file.buffer;
+        console.log(image, "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
         const postData = await Post.create({
             title: req.body.title,
             content: req.body.content,
             userId: req.session.userId,
-            movieId: req.body.movieId
-
+            movieId: req.body.movieId,
+            img: image.toString('base64')
         });
-        console.log(postData.movieId, "<<<<<<<<<<<<<<<< here!");
+        console.log(postData.image, "<<<<<<<<<<<<<<<< here!");
         // console.log(postData.movieId, "aaaaaaaaa here<<<<<<<<<");
         console.log('Post successfully created');
         res.status(200).json(postData);
