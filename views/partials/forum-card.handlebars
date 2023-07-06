@@ -1,11 +1,13 @@
-<div class=" group mt-0 bg-slate-300 hover:border-white hover:border-4 transition-colors duration-200 rounded-xl px-3 md:w-11/12 mx-auto w-5/6 drop-shadow-lg">
+<a href="/movie/{{id}}">
+<div class=" group mt-0 bg-slate-300 hover:border-yellow-200 hover:border-8 transition-colors duration-200 rounded-xl px-2 py-2 md:w-11/12 w-12/12 mx-auto w-5/6 drop-shadow-lg">
 
-  <h2 class="text-center text-slate-800">
+  <h2 class="text-center text-slate-800" style="font-family: 'Acme';"></h2>
 
-    <a class="font-bold text-3xl group-hover:text-white" href="/movie/{{id}}">{{title}}</a>
+    <h2 class="font-bold text-3xl text-center group-hover:text-white">{{title}}
   </h2>
 
-  <img class="rounded-lg" src="https://image.tmdb.org/t/p/original/{{poster}}" alt="movie_poster" />
-  <div class="text-2xl text-center">{{summary}}</div>
+  <img class="rounded-lg drop-shadow-xl" src="https://image.tmdb.org/t/p/original/{{poster}}" alt="movie_poster" />
+  <div class="sm:text-xl 2xl:text-3xl md:text-xl text-base text-center">{{summary}}</div>
 
 </div>
+</a>

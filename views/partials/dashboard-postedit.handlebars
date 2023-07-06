@@ -1,17 +1,20 @@
-<div class="group mt-0 bg-slate-300 hover:border-white hover:border-4 transition-colors duration-200 rounded-xl px-1 md:w-11/12 mx-auto w-5/6 drop-shadow-lg">
+<div class="mt-0 bg-slate-300 hover:border-yellow-100 hover:border-4 transition-colors duration-200 rounded-xl w-11/12 sm:w-12/12 h-3/12 mx-auto drop-shadow-lg">
 
-  <div class="flex gap-3 p-1">
+  <div class="flex p-1">
       {{#if img}}
-        <img class="block w-24 rounded-xl"
+        <img class="block w-24 h-12/12 rounded-xl"
           src="data:image/png;base64,{{img}}"
           alt="img_content"/>
-      <div class=" w-11/12 h-11/12 float-right">
+      <div class=" w-11/12 h-11/12 ml-3 float-right">
       <h5 class="font-bold">{{user.username}}</h5>
       <h4 class="font-extrabold"><a href="/post/{{id}}" class="dashboard-title">{{title}}</a></h4>
       {{/if}}
       <p>{{content}}</p>
-      <a href="/dashboard/edit/{{id}}" class="dashboard-edit">Edit</a>
+
+      <div class="bg-slate-100 text-center w-10 rounded-lg ml-auto mt-16">
+      <a class="font-semibold" href="/dashboard/edit/{{id}}" class="dashboard-edit">Edit</a>
       </div>
+    </div>
   </div>
 </div>
 
