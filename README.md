@@ -37,3 +37,7 @@ https://github.com/FelixW01/movie-forum-app
   #### Ashley Braxton
   github- AshleyBraxton
   email- ashley.braxton25@gmail.com
+
+  ### Herb Sneed
+
+  ### Nick P
