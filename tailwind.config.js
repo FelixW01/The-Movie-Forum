@@ -1,11 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
-    './views/**/*.handlebars'
+    './views/*.handlebars',
+    './views/partials/*.handlebars',
+    './views/layouts/*.handlebars'
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      acme: ['Acme'],
+    },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 }
 

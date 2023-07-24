@@ -1,0 +1,4 @@
+{
+  "watch": ["*.js", "views/*", "public/*"],
+  "ext": "js, css, handlebars"
+}
