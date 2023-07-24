@@ -1,19 +1,19 @@
 <div class="h-full sm:h-full bg-gradient-to-t from-slate-400 to-slate-800">
- 
-    <div class="relative top-5">
-        <h1
-            class="text-center text-slate-300 text-4xl md:text-5xl lg:text-7xl xl:text-6xl 2xl:text-7xl font-bold drop-shadow-xl">
-            Upcoming Movies</h1>
-    </div>
-
-    <div
-        class="grid grid-cols-1 my-5 sm:w-12/12 drop-shadow-lg h-6/6 px-0 sm:px-3 pb-3 gap-y-3 gap-x-0 sm:grid-cols-1 sm:gap-y-4 md:grid-cols-2 md:gap-y-12 md:h-4/6 md:px-3 lg:grid-cols-3 lg:gap-y-12 lg:h-4/6 xl:grid-cols-4 2xl:grid-cols-5">
-        {{#each movies as |movie|}}
-
-        <div class="">
-            {{> forum-card movie}}
+  <h1
+    class="py-4 text-4xl font-bold text-center font-acme text-slate-300 md:text-5xl lg:text-7xl xl:text-6xl 2xl:text-7xl drop-shadow-xl">
+    Upcoming Movies
+  </h1>
+  <div
+    class="grid grid-cols-1 w-[90%] gap-4 m-auto max-w-7xl drop-shadow-lg md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+    {{#each movies as |movie|}}
+    <div class="">
+      <a href="/movie/{{id}}">
+        <div class="max-w-sm m-auto overflow-hidden bg-white rounded shadow-lg">
+          <img class="object-contain w-full" src="https://image.tmdb.org/t/p/original{{poster}}"
+            alt="{{title}} poster" />
         </div>
-        {{/each}}
+      </a>
     </div>
+    {{/each}}
+  </div>
 </div>
-
