@@ -3,6 +3,26 @@ const Post = require('./post');
 const Comment = require('./comment');
 const Movie = require('./movie');
 
+Movie.hasMany(Post, {
+  foreignKey: 'movieId',
+  onDelete: 'CASCADE',
+});
+
+Post.belongsTo(Movie, {
+  foreignKey: 'movieId',
+  onDelete: 'CASCADE',
+});
+
+User.hasMany(Post, {
+  foreignKey: 'userId',
+  onDelete: 'CASCADE',
+});
+
+Post.belongsTo(User, {
+  foreignKey: 'userId',
+  onDelete: 'CASCADE',
+});
+
 Post.hasMany(Comment, {
   foreignKey: 'postId',
   onDelete: 'CASCADE',
@@ -13,37 +33,14 @@ Comment.belongsTo(Post, {
   onDelete: 'CASCADE',
 });
 
-Movie.hasMany(Post, {
-  foreignKey: 'movieId',
-  onDelete: 'CASCADE',
-});
-
-Post.belongsToMany(Movie, {
-  through: {
-    model: Movie
-  }
-});
-
-User.hasMany(Post, {
-  foreignKey: 'userId',
-  onDelete: 'CASCADE',
-});
-
-Post.belongsTo(User, {
-  through: {
-    model: User
-  }
-});
-
 User.hasMany(Comment, {
   foreignKey: 'userId',
   onDelete: 'CASCADE',
 });
 
 Comment.belongsTo(User, {
-  through: {
-    model: User
-  }
+  foreignKey: 'userId',
+  onDelete: 'CASCADE',
 })
 
 module.exports = {
